@@ -38,26 +38,34 @@ overflow-x: hidden;
 
     <!-- Hero - Magazine Cover -->
     <section class="h-screen min-h-[700px] relative flex items-end overflow-hidden">
-        <div class="absolute inset-0 w-full h-full z-0">
-            <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="w-full h-full object-cover object-top">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
-        </div>
         <div class="grid grid-cols-12 gap-4 px-4 md:px-12 relative z-10 w-full pb-16 md:pb-24">
-            <div class="col-span-12 md:col-span-8">
-                <h1 class="font-['Playfair_Display'] text-[12vw] leading-[0.85] font-normal text-white">
+            <div class="col-span-12 md:col-span-6 lg:col-span-7">
+                <p class="font-['Jost'] text-[10px] uppercase tracking-[0.4em] text-[#8C7B6B] mb-8">Executive Assistance</p>
+                <h1 class="font-['Playfair_Display'] text-[12vw] md:text-[8vw] leading-[0.85] font-normal text-[#1A1A1A]">
                     Stop Working<br>
                     <em class="italic">60-Hour Weeks</em>
                 </h1>
+                <p class="font-['Jost'] text-lg font-light text-[#4A4A4A] leading-[1.8] max-w-md mt-8 mb-10">
+                    Finally, a virtual assistant who actually understands your business. Get 15+ hours back every week without hiring full-time staff.
+                </p>
+                <div class="flex gap-10 items-center">
+                    <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group inline-flex items-center gap-2 font-['Jost'] text-[11px] uppercase tracking-[0.3em] text-[#1A1A1A] border-b border-[#1A1A1A] pb-1 hover:text-[#8C7B6B] hover:border-[#8C7B6B] transition-colors duration-700">
+                        Hire Me <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
+                    </a>
+                    <a href="#services" class="group inline-flex items-center gap-2 font-['Jost'] text-[11px] uppercase tracking-[0.3em] text-[#4A4A4A] border-b border-[#4A4A4A] pb-1 hover:text-[#1A1A1A] hover:border-[#1A1A1A] transition-colors duration-700">
+                        View Services <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:block col-span-6 lg:col-span-5 relative h-[80vh]">
+                <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="w-full h-full object-cover object-top rounded-t-[12rem] rounded-bl-[12rem] rounded-br-[1rem]">
             </div>
         </div>
-        <div class="absolute bottom-12 right-4 md:right-12 max-w-xs text-right z-10">
-            <p class="font-['Jost'] text-sm text-white/80 leading-relaxed mb-6">
-                Finally, a virtual assistant who actually understands your business. Get 15+ hours back every week.
-            </p>
-            <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group inline-flex items-center gap-2 font-['Jost'] text-[11px] uppercase tracking-[0.3em] text-white border-b border-white pb-1 hover:opacity-60 transition-opacity duration-700">
-                Hire Me <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
-            </a>
+        <div class="block md:hidden absolute inset-0 w-full h-full z-0">
+            <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="w-full h-full object-cover object-top">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#F4F1EC] via-[#F4F1EC]/70 to-transparent"></div>
         </div>
+    </section>
     </section>
 
     <!-- About -->
