@@ -7,14 +7,14 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
 body {
 font-family: 'Inter', sans-serif;
-background-color: #fafaf9;
+background-color: #fcfbf9;
 }
-.font-instrument-serif {
-font-family: 'Instrument Serif', serif;
+.font-playfair {
+font-family: 'Playfair Display', serif;
 }
 .fade-up {
 opacity: 0;
@@ -28,50 +28,37 @@ animation: fadeUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 from { opacity: 0; transform: translateY(20px) scale(0.98); }
 to { opacity: 1; transform: translateY(0) scale(1); }
 }
-.btn-lux {
-background: linear-gradient(to bottom, #292524, #1c1917);
-transition: all 0.5s ease-out;
-}
-.btn-lux:hover {
-background: linear-gradient(to bottom, #3a3530, #292524);
-transform: translateY(-1px);
-box-shadow: 0 30px 60px -15px rgba(28, 25, 23, 0.25);
-}
 </style>
 <script>
 tailwind.config = {
 theme: {
 extend: {
 colors: {
-gold: {
-50: '#fffbf0', 100: '#fbf5e1', 200: '#f3e6c0', 300: '#e8cf90', 400: '#deb562', 500: '#d49b3d', 600: '#b8792e', 700: '#945826',
+brass: {
+100: '#f7f3ee', 200: '#ede5db', 300: '#ddd0be', 400: '#c9b591', 500: '#b08d57', 600: '#977a45', 700: '#7d653a',
 },
 charcoal: {
 800: '#292524', 900: '#1c1917',
 },
 stone: {
-50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 300: '#d6d3d1',
+50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 300: '#d6d3d1', 400: '#a8a29e', 500: '#78716c', 600: '#57534e', 700: '#44403c',
 }
 },
 fontFamily: { sans: ['Inter', 'sans-serif'] },
-boxShadow: {
-'lux': '0 30px 60px -15px rgba(28, 25, 23, 0.08)',
-'lux-hover': '0 40px 80px -20px rgba(28, 25, 23, 0.12)',
-}
 }
 }
 }
 </script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap">
 </head>
-<body class="text-stone-500 antialiased selection:bg-gold-200 selection:text-charcoal-900">
+<body class="text-stone-700 antialiased selection:bg-brass-100 selection:text-charcoal-900">
 
     <!-- Sticky Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-200/60 transition-all">
+    <nav class="fixed top-0 w-full z-50 bg-[#fcfbf9]/85 backdrop-blur-md border-b border-stone-200/60 transition-all">
         <div class="flex h-20 max-w-7xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
             <a href="#" class="text-xl font-semibold tracking-tight text-charcoal-900 flex items-center gap-3">
-                <div class="w-9 h-9 bg-gradient-to-br from-charcoal-900 to-charcoal-800 text-gold-200 rounded-xl flex items-center justify-center shadow-lg shadow-charcoal-900/10">
+                <div class="w-9 h-9 bg-charcoal-900 text-brass-200 rounded-xl flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7L12 12L22 7L12 2Z"/><path d="M2 17L12 22L22 17"/><path d="M2 12L12 17L22 12"/></svg>
                 </div>
                 <span class="text-2xl font-extrabold tracking-tight">Guestly</span>
@@ -80,7 +67,7 @@ boxShadow: {
                 <a href="#about" class="hover:text-charcoal-900 transition-colors font-semibold">About</a>
                 <a href="#services" class="hover:text-charcoal-900 transition-colors font-semibold">Services</a>
                 <a href="#testimonials" class="hover:text-charcoal-900 transition-colors font-semibold">Testimonials</a>
-                <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="px-6 py-2.5 btn-lux text-white rounded-xl font-semibold shadow-lux">
+                <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="px-6 py-2.5 bg-charcoal-900 text-white rounded-xl hover:bg-brass-600 transition-colors duration-700 font-semibold">
                     Book Discovery Call
                 </a>
             </div>
@@ -91,37 +78,35 @@ boxShadow: {
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-36 pb-32 lg:pt-44 lg:pb-40 overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-white via-stone-50/80 to-stone-50 pointer-events-none"></div>
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-gold-100/40 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-gold-50/60 to-transparent rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
+    <section class="relative pt-40 pb-32 md:pt-56 md:pb-48 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#fcfbf9] via-[#fcfbf9] to-[#fcfbf9] pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
                 <div class="fade-up order-2 lg:order-1">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-50 border border-gold-100/60 text-gold-700 text-xs font-bold tracking-wider uppercase mb-8">
-                        <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
-                        NOW ACCEPTING NEW CLIENTS
+                    <div class="font-mono text-brass-600 text-xs tracking-[0.2em] uppercase mb-10">
+                        <span class="inline-block w-2 h-2 rounded-full bg-brass-500 mr-2"></span>
+                        Now accepting new clients
                     </div>
-                    <h1 class="font-instrument-serif text-6xl sm:text-7xl lg:text-8xl font-normal tracking-tight text-charcoal-900 mb-8 leading-[1.05]">
-                        Stop Working 60-Hour Weeks <br class="hidden lg:block"> 
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-500 via-gold-600 to-gold-700">While Your Business Suffers</span>
+                    <h1 class="font-playfair text-6xl md:text-8xl font-normal leading-[0.9] tracking-tight text-charcoal-900 mb-10">
+                        Stop Working 60-Hour Weeks<br> 
+                        <span class="italic text-brass-500">While Your Business Suffers</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-stone-500 mb-10 max-w-xl leading-relaxed">
+                    <p class="text-lg md:text-xl text-stone-600 mb-12 max-w-lg leading-relaxed">
                         Finally, a virtual assistant who actually understands your business. Get <strong class="text-charcoal-900">15+ hours back every week</strong> without hiring full-time staff.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-5">
-                        <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group px-10 py-5 btn-lux text-white rounded-xl font-bold flex items-center justify-center gap-3 shadow-lux hover:shadow-lux-hover text-lg">
-                            Hire Me <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group px-10 py-5 bg-charcoal-900 text-white rounded-xl hover:bg-brass-600 transition-colors duration-700 font-semibold flex items-center justify-center gap-3 text-lg">
+                            Hire Me <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                         </a>
-                        <a href="#services" class="px-10 py-5 bg-white border-2 border-stone-200 text-charcoal-900 rounded-xl hover:border-gold-300 hover:text-gold-700 transition-all font-bold flex items-center justify-center text-lg shadow-lux hover:shadow-lux-hover">
+                        <a href="#services" class="px-10 py-5 border border-stone-300 text-charcoal-900 rounded-xl hover:border-brass-500 transition-colors duration-500 font-semibold flex items-center justify-center text-lg">
                             View Services
                         </a>
                     </div>
                 </div>
                 <div class="fade-up delay-100 order-1 lg:order-2 relative">
                     <div class="relative">
-                        <div class="absolute -inset-6 bg-gradient-to-br from-gold-100/30 via-stone-100/10 to-transparent rounded-[40px] blur-2xl"></div>
-                        <div class="relative aspect-[3/4] md:aspect-[3/4] overflow-hidden rounded-[32px] shadow-2xl" style="box-shadow: 0 40px 80px -20px rgba(28, 25, 23, 0.15), 0 0 0 1px rgba(255,255,255,0.1);">
+                        <div class="absolute -inset-8 bg-gradient-to-br from-brass-100/50 via-stone-100/20 to-transparent rounded-[48px] blur-3xl"></div>
+                        <div class="relative aspect-[3/4] md:aspect-[3/4] overflow-hidden rounded-[32px]" style="box-shadow: 0 40px 80px -20px rgba(28, 25, 23, 0.08), 0 0 0 1px rgba(255,255,255,0.1);">
                             <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="w-full h-full object-cover object-top">
                         </div>
                     </div>
@@ -131,148 +116,147 @@ boxShadow: {
     </section>
 
     <!-- Mission/About Section -->
-    <section id="about" class="py-32 lg:py-40 bg-white border-t border-stone-100">
+    <section id="about" class="py-32 md:py-48 bg-[#fcfbf9]">
         <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-20 fade-up">
-                <span class="text-gold-600 font-bold text-sm tracking-[0.2em] uppercase">About</span>
-                <h2 class="font-instrument-serif text-5xl lg:text-6xl font-normal tracking-tight text-charcoal-900 mt-4 mb-8">Meet Nancy Monaco</h2>
-                <p class="text-xl text-stone-500 leading-relaxed max-w-3xl mx-auto">
-                    After years in customer service, I saw too many entrepreneurs burn out because they were the single point of failure in their own business. I didn't start <strong class="text-charcoal-900 font-bold">Guestly</strong> to complete tasks. I started it to help owners build <strong class="text-charcoal-900 font-bold">autonomous operations</strong>.
+            <div class="text-center mb-24 fade-up">
+                <p class="font-mono text-brass-600 text-xs tracking-[0.2em] uppercase mb-6">About</p>
+                <h2 class="font-playfair text-5xl md:text-6xl font-normal tracking-tight text-charcoal-900 mb-8">Meet Nancy Monaco</h2>
+                <p class="text-xl text-stone-600 leading-relaxed max-w-3xl mx-auto">
+                    After years in customer service, I saw too many entrepreneurs burn out because they were the single point of failure in their own business. I didn't start <strong class="text-charcoal-900 font-semibold">Guestly</strong> to complete tasks. I started it to help owners build <strong class="text-charcoal-900 font-semibold">autonomous operations</strong>.
                 </p>
             </div>
             <div class="grid md:grid-cols-2 gap-8 fade-up delay-100">
-                <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100/70 shadow-lux hover:shadow-lux-hover transition-all duration-500">
-                    <ul class="space-y-5">
-                        <li class="flex items-start gap-4"><div class="w-10 h-10 bg-gold-500/10 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold-600"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg></div><div><span class="text-stone-700 font-medium">Strategic Operations Partner</span><p class="text-sm text-stone-500 mt-0.5">for entrepreneurs scaling their business</p></div></li>
-                        <li class="flex items-start gap-4"><div class="w-10 h-10 bg-gold-500/10 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold-600"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg></div><div><span class="text-stone-700 font-medium">Autonomous Operations</span><p class="text-sm text-stone-500 mt-0.5">not just task lists that keep you dependent</p></div></li>
-                        <li class="flex items-start gap-4"><div class="w-10 h-10 bg-gold-500/10 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold-600"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div><div><span class="text-stone-700 font-medium">15+ Hours Saved Weekly</span><p class="text-sm text-stone-500 mt-0.5">per client, on average</p></div></li>
+                <div class="bg-white p-10 rounded-2xl border border-stone-200/60 transition-all duration-500 hover:border-brass-400" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4"><div class="w-10 h-10 bg-brass-100 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-brass-600"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg></div><div><span class="text-stone-700 font-medium">Strategic Operations Partner</span><p class="text-sm text-stone-500 mt-1">for entrepreneurs scaling their business</p></div></li>
+                        <li class="flex items-start gap-4"><div class="w-10 h-10 bg-brass-100 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-brass-600"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg></div><div><span class="text-stone-700 font-medium">Autonomous Operations</span><p class="text-sm text-stone-500 mt-1">not just task lists that keep you dependent</p></div></li>
+                        <li class="flex items-start gap-4"><div class="w-10 h-10 bg-brass-100 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-brass-600"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div><div><span class="text-stone-700 font-medium">15+ Hours Saved Weekly</span><p class="text-sm text-stone-500 mt-1">per client, on average</p></div></li>
                     </ul>
                 </div>
-                <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100/70 shadow-lux hover:shadow-lux-hover transition-all duration-500">
-                    <ul class="space-y-5">
-                        <li class="flex items-start gap-4"><div class="w-10 h-10 bg-gold-500/10 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold-600"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg></div><div><span class="text-stone-700 font-medium">Client Relationship Expert</span><p class="text-sm text-stone-500 mt-0.5">white-glove communication and retention focus</p></div></li>
-                        <li class="flex items-start gap-4"><div class="w-10 h-10 bg-gold-500/10 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold-600"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg></div><div><span class="text-stone-700 font-medium">System Architecture Specialist</span><p class="text-sm text-stone-500 mt-0.5">automation and workflow optimization</p></div></li>
-                        <li class="flex items-start gap-4"><div class="w-10 h-10 bg-gold-500/10 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold-600"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><div><span class="text-stone-700 font-medium">500+ Businesses Served</span><p class="text-sm text-stone-500 mt-0.5">and counting</p></div></li>
+                <div class="bg-white p-10 rounded-2xl border border-stone-200/60 transition-all duration-500 hover:border-brass-400" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4"><div class="w-10 h-10 bg-brass-100 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-brass-600"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg></div><div><span class="text-stone-700 font-medium">Client Relationship Expert</span><p class="text-sm text-stone-500 mt-1">white-glove communication and retention focus</p></div></li>
+                        <li class="flex items-start gap-4"><div class="w-10 h-10 bg-brass-100 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-brass-600"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg></div><div><span class="text-stone-700 font-medium">System Architecture Specialist</span><p class="text-sm text-stone-500 mt-1">automation and workflow optimization</p></div></li>
+                        <li class="flex items-start gap-4"><div class="w-10 h-10 bg-brass-100 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-brass-600"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><div><span class="text-stone-700 font-medium">500+ Businesses Served</span><p class="text-sm text-stone-500 mt-1">and counting</p></div></li>
                     </ul>
                 </div>
             </div>
-            <div class="mt-12 p-10 bg-gradient-to-br from-stone-50 to-stone-100/50 rounded-2xl border-l-[6px] border-gold-500 fade-up delay-200 shadow-lux">
-                <p class="text-xl md:text-2xl font-bold text-charcoal-900 leading-relaxed italic">
-                    "My success isn't measured by how many hours I work. It's measured by how many hours <span class="text-gold-600">you</span> get back to spend on high-level growth or with your family."
+            <div class="mt-16 p-10 bg-white rounded-2xl border-l-[6px] border-brass-500 fade-up delay-200" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                <p class="text-xl md:text-2xl font-playfair text-charcoal-900 leading-relaxed italic">
+                    "My success isn't measured by how many hours I work. It's measured by how many hours <span class="text-brass-500">you</span> get back to spend on high-level growth or with your family."
                 </p>
-                <p class="mt-5 text-gold-600 font-bold">Nancy Monaco, Founder of Guestly</p>
+                <p class="mt-6 text-brass-600 font-semibold">Nancy Monaco, Founder of Guestly</p>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-32 lg:py-40 bg-stone-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20 fade-up">
-                <span class="text-gold-600 font-bold text-sm tracking-[0.2em] uppercase">What We Do</span>
-                <h2 class="font-instrument-serif text-5xl lg:text-6xl font-normal tracking-tight text-charcoal-900 mt-4 mb-6">Core Services</h2>
-                <p class="text-stone-500 text-lg max-w-2xl mx-auto">Comprehensive support designed to streamline your business and give you back your time.</p>
+    <section id="services" class="py-32 md:py-48 bg-[#fcfbf9] border-t border-stone-200/60">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-24 fade-up">
+                <p class="font-mono text-brass-600 text-xs tracking-[0.2em] uppercase mb-6">What We Do</p>
+                <h2 class="font-playfair text-5xl md:text-6xl font-normal tracking-tight text-charcoal-900 mb-6">Core Services</h2>
+                <p class="text-stone-600 text-lg max-w-2xl mx-auto">Comprehensive support designed to streamline your business and give you back your time.</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-2xl border border-stone-100/70 shadow-lux hover:shadow-lux-hover transition-all duration-500 fade-up">
-                    <div class="w-14 h-14 bg-gold-500/10 rounded-2xl flex items-center justify-center text-gold-600 mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg></div>
-                    <h3 class="text-xl font-bold text-charcoal-900 mb-4">Strategic Planning</h3>
-                    <p class="text-stone-500 leading-relaxed">Calendar management and executive assistance tailored to your business objectives.</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-12 rounded-2xl border border-stone-200/60 transition-all duration-500 hover:border-brass-400 fade-up" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                    <div class="w-14 h-14 bg-brass-100 rounded-2xl flex items-center justify-center text-brass-600 mb-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg></div>
+                    <h3 class="text-2xl font-playfair text-charcoal-900 mb-4">Strategic Planning</h3>
+                    <p class="text-stone-600 leading-relaxed">Calendar management and executive assistance tailored to your business objectives.</p>
                 </div>
-                <div class="bg-white p-10 rounded-2xl border border-stone-100/70 shadow-lux hover:shadow-lux-hover transition-all duration-500 fade-up delay-100">
-                    <div class="w-14 h-14 bg-gold-500/10 rounded-2xl flex items-center justify-center text-gold-600 mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M9 5v4"></path><path d="M15 5v4"></path><path d="M3 13h18"></path><path d="M5 13v6h14v-6"></path></svg></div>
-                    <h3 class="text-xl font-bold text-charcoal-900 mb-4">Ops &amp; Systems</h3>
-                    <p class="text-stone-500 leading-relaxed">Streamline your backend processes with custom automations and CRM management.</p>
+                <div class="bg-white p-12 rounded-2xl border border-stone-200/60 transition-all duration-500 hover:border-brass-400 fade-up delay-100" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                    <div class="w-14 h-14 bg-brass-100 rounded-2xl flex items-center justify-center text-brass-600 mb-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M9 5v4"></path><path d="M15 5v4"></path><path d="M3 13h18"></path><path d="M5 13v6h14v-6"></path></svg></div>
+                    <h3 class="text-2xl font-playfair text-charcoal-900 mb-4">Ops &amp; Systems</h3>
+                    <p class="text-stone-600 leading-relaxed">Streamline your backend processes with custom automations and CRM management.</p>
                 </div>
-                <div class="bg-white p-10 rounded-2xl border border-stone-100/70 shadow-lux hover:shadow-lux-hover transition-all duration-500 fade-up delay-200">
-                    <div class="w-14 h-14 bg-gold-500/10 rounded-2xl flex items-center justify-center text-gold-600 mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
-                    <h3 class="text-xl font-bold text-charcoal-900 mb-4">Customer Success</h3>
-                    <p class="text-stone-500 leading-relaxed">White-glove communication that keeps your clients happy and your retention high.</p>
+                <div class="bg-white p-12 rounded-2xl border border-stone-200/60 transition-all duration-500 hover:border-brass-400 fade-up delay-200" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                    <div class="w-14 h-14 bg-brass-100 rounded-2xl flex items-center justify-center text-brass-600 mb-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                    <h3 class="text-2xl font-playfair text-charcoal-900 mb-4">Customer Success</h3>
+                    <p class="text-stone-600 leading-relaxed">White-glove communication that keeps your clients happy and your retention high.</p>
                 </div>
-                <div class="bg-white p-10 rounded-2xl border border-stone-100/70 shadow-lux hover:shadow-lux-hover transition-all duration-500 fade-up">
-                    <div class="w-14 h-14 bg-gold-500/10 rounded-2xl flex items-center justify-center text-gold-600 mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg></div>
-                    <h3 class="text-xl font-bold text-charcoal-900 mb-4">Inbox Management</h3>
-                    <p class="text-stone-500 leading-relaxed">Full inbox triage, response drafting, and priority flagging so you never miss a critical message.</p>
+                <div class="bg-white p-12 rounded-2xl border border-stone-200/60 transition-all duration-500 hover:border-brass-400 fade-up" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                    <div class="w-14 h-14 bg-brass-100 rounded-2xl flex items-center justify-center text-brass-600 mb-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg></div>
+                    <h3 class="text-2xl font-playfair text-charcoal-900 mb-4">Inbox Management</h3>
+                    <p class="text-stone-600 leading-relaxed">Full inbox triage, response drafting, and priority flagging so you never miss a critical message.</p>
                 </div>
-                <div class="bg-white p-10 rounded-2xl border border-stone-100/70 shadow-lux hover:shadow-lux-hover transition-all duration-500 fade-up delay-100">
-                    <div class="w-14 h-14 bg-gold-500/10 rounded-2xl flex items-center justify-center text-gold-600 mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
-                    <h3 class="text-xl font-bold text-charcoal-900 mb-4">Research &amp; Reporting</h3>
-                    <p class="text-stone-500 leading-relaxed">Competitive analysis, data-backed recommendations, and portfolio efficiency audits.</p>
+                <div class="bg-white p-12 rounded-2xl border border-stone-200/60 transition-all duration-500 hover:border-brass-400 fade-up delay-100" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                    <div class="w-14 h-14 bg-brass-100 rounded-2xl flex items-center justify-center text-brass-600 mb-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
+                    <h3 class="text-2xl font-playfair text-charcoal-900 mb-4">Research &amp; Reporting</h3>
+                    <p class="text-stone-600 leading-relaxed">Competitive analysis, data-backed recommendations, and portfolio efficiency audits.</p>
                 </div>
-                <div class="bg-gradient-to-br from-charcoal-900 to-charcoal-800 p-10 rounded-2xl shadow-lux flex flex-col items-center justify-center text-center fade-up delay-200 border border-charcoal-800">
-                    <h3 class="text-xl font-bold text-white mb-3">Need Something Else?</h3>
-                    <p class="text-stone-400 text-sm mb-8">I adapt quickly to new tools and processes.</p>
-                    <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I%20have%20a%20custom%20request." target="_blank" class="px-8 py-3.5 bg-white text-charcoal-900 rounded-xl text-sm font-bold hover:bg-gold-50 transition-all w-fit shadow-lg">Ask Me About It</a>
+                <div class="bg-charcoal-900 p-12 rounded-2xl flex flex-col items-center justify-center text-center fade-up delay-200 border border-charcoal-800">
+                    <h3 class="text-2xl font-playfair text-white mb-4">Need Something Else?</h3>
+                    <p class="text-stone-400 text-sm mb-10">I adapt quickly to new tools and processes.</p>
+                    <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I%20have%20a%20custom%20request." target="_blank" class="px-8 py-3.5 bg-white text-charcoal-900 rounded-xl text-sm font-semibold hover:bg-brass-100 transition-colors duration-500 w-fit">Ask Me About It</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Metrics Bar -->
-    <div class="bg-gradient-to-br from-charcoal-900 via-charcoal-800 to-charcoal-900 py-20 text-white border-y border-white/5">
+    <div class="py-20 md:py-24 bg-[#fcfbf9] border-y border-stone-200">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-                <div class="fade-up"><div class="text-4xl md:text-5xl font-extrabold text-gold-400 mb-3">500+</div><div class="text-xs font-bold uppercase tracking-[0.15em] text-stone-400">Businesses Served</div></div>
-                <div class="fade-up delay-100"><div class="text-4xl md:text-5xl font-extrabold text-gold-400 mb-3">15+</div><div class="text-xs font-bold uppercase tracking-[0.15em] text-stone-400">Hours Saved Weekly</div></div>
-                <div class="fade-up delay-200"><div class="text-4xl md:text-5xl font-extrabold text-gold-400 mb-3">100%</div><div class="text-xs font-bold uppercase tracking-[0.15em] text-stone-400">Satisfaction Rate</div></div>
-                <div class="fade-up delay-300"><div class="text-4xl md:text-5xl font-extrabold text-gold-400 mb-3">&pound;2.4K</div><div class="text-xs font-bold uppercase tracking-[0.15em] text-stone-400">Avg Monthly Saved</div></div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+                <div class="fade-up"><div class="font-playfair text-6xl text-brass-500 mb-4">500+</div><div class="text-xs font-mono uppercase tracking-[0.2em] text-stone-500">Businesses Served</div></div>
+                <div class="fade-up delay-100"><div class="font-playfair text-6xl text-brass-500 mb-4">15+</div><div class="text-xs font-mono uppercase tracking-[0.2em] text-stone-500">Hours Saved Weekly</div></div>
+                <div class="fade-up delay-200"><div class="font-playfair text-6xl text-brass-500 mb-4">100%</div><div class="text-xs font-mono uppercase tracking-[0.2em] text-stone-500">Satisfaction Rate</div></div>
+                <div class="fade-up delay-300"><div class="font-playfair text-6xl text-brass-500 mb-4">&pound;2.4K</div><div class="text-xs font-mono uppercase tracking-[0.2em] text-stone-500">Avg Monthly Saved</div></div>
             </div>
         </div>
     </div>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-32 lg:py-40 bg-white">
+    <section id="testimonials" class="py-32 md:py-48 bg-[#fcfbf9]">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20 fade-up">
-                <span class="text-gold-600 font-bold text-sm tracking-[0.2em] uppercase">Social Proof</span>
-                <h2 class="font-instrument-serif text-5xl lg:text-6xl font-normal tracking-tight text-charcoal-900 mt-4 mb-6">The Wall of Love</h2>
-                <p class="text-stone-500 text-lg max-w-2xl mx-auto">Real results from business owners who got their time back.</p>
+            <div class="text-center mb-24 fade-up">
+                <p class="font-mono text-brass-600 text-xs tracking-[0.2em] uppercase mb-6">Social Proof</p>
+                <h2 class="font-playfair text-5xl md:text-6xl font-normal tracking-tight text-charcoal-900 mb-6">The Wall of Love</h2>
+                <p class="text-stone-600 text-lg max-w-2xl mx-auto">Real results from business owners who got their time back.</p>
             </div>
-            <div class="grid lg:grid-cols-3 gap-8">
-                <div class="group border border-stone-100/70 rounded-2xl p-8 transition-all duration-500 bg-stone-50/50 shadow-lux hover:shadow-lux-hover fade-up relative overflow-hidden">
-                    <svg class="absolute -top-6 -left-2 w-24 h-24 text-stone-100/70 select-none pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-2xl border border-stone-200/60 transition-all duration-500 hover:border-brass-400 fade-up relative overflow-hidden" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                    <svg class="absolute -top-6 -left-2 w-24 h-24 text-stone-100 select-none pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
                     <div class="flex items-center gap-4 mb-6 relative z-10">
-                        <img class="w-14 h-14 rounded-full object-cover ring-2 ring-gold-200/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNp8FI54sUXQxY2XfMF9bSLEZXmXgWe6tNf6AfrxSNIcTb0Xj2_p05MTvPGhhZA6uuZgtYI-1Ww9inMfYYbLgurGi8BskJkeosdZbRrcmM5dwFJrsyD8T1ju2BbqyOUG5uBFT8KlUnqe_b6d13SDa362J0zoIb-QxKMqNLaJhm5sUYB4D8D9qIcwWEwoxYcZ9ZA0yGfXaoSgpMR6d64svLBA4JhTngyrNcbLB6LYQQ29xJkSbVY-0dRCsgBw8vWPO4XuWbVLLg7c45" alt="Sarah J.">
-                        <div><h4 class="font-bold text-charcoal-900 text-lg">Sarah Jenkins</h4><p class="text-sm text-stone-500">Founder, Bloom Agency</p></div>
+                        <img class="w-14 h-14 rounded-full object-cover ring-2 ring-brass-200/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNp8FI54sUXQxY2XfMF9bSLEZXmXgWe6tNf6AfrxSNIcTb0Xj2_p05MTvPGhhZA6uuZgtYI-1Ww9inMfYYbLgurGi8BskJkeosdZbRrcmM5dwFJrsyD8T1ju2BbqyOUG5uBFT8KlUnqe_b6d13SDa362J0zoIb-QxKMqNLaJhm5sUYB4D8D9qIcwWEwoxYcZ9ZA0yGfXaoSgpMR6d64svLBA4JhTngyrNcbLB6LYQQ29xJkSbVY-0dRCsgBw8vWPO4XuWbVLLg7c45" alt="Sarah J.">
+                        <div><h4 class="font-semibold text-charcoal-900 text-lg">Sarah Jenkins</h4><p class="text-sm text-stone-500">Founder, Bloom Agency</p></div>
                     </div>
-                    <p class="text-stone-500 mb-6 leading-relaxed italic relative z-10">"Guestly didn't just take over my emails. They completely redesigned my client onboarding process. I've never felt more organized."</p>
-                    <span class="inline-block px-4 py-1.5 bg-green-50 text-green-700 text-xs font-bold rounded-full border border-green-100 relative z-10">&pound;2.4k Saved Monthly</span>
+                    <p class="text-stone-600 mb-6 leading-relaxed italic relative z-10">"Guestly didn't just take over my emails. They completely redesigned my client onboarding process. I've never felt more organized."</p>
+                    <span class="inline-block px-4 py-1.5 bg-brass-100 text-brass-700 text-xs font-mono uppercase tracking-wider rounded-full relative z-10">&pound;2.4k Saved Monthly</span>
                 </div>
-                <div class="group border border-stone-100/70 rounded-2xl p-8 transition-all duration-500 bg-stone-50/50 shadow-lux hover:shadow-lux-hover fade-up delay-100 relative overflow-hidden">
-                    <svg class="absolute -top-6 -left-2 w-24 h-24 text-stone-100/70 select-none pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+                <div class="bg-white p-10 rounded-2xl border border-stone-200/60 transition-all duration-500 hover:border-brass-400 fade-up delay-100 relative overflow-hidden" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                    <svg class="absolute -top-6 -left-2 w-24 h-24 text-stone-100 select-none pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
                     <div class="flex items-center gap-4 mb-6 relative z-10">
-                        <img class="w-14 h-14 rounded-full object-cover ring-2 ring-gold-200/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCORI6i9_-KGmMtDJ-f_X2ftKApZjVMGaG0JZI_MovQO7X9XH-jKXcbTai2n6JsYzgS3stjrLgteqnCYE3MvIp9KvjJnZUijcMxBlWPWuSos-NjdbKIzVkzNL3WLf1TRMnvcgARt2v4NZLvLebTuriuOOC2jyy5ottOvyC6iPIp_UqCzkIyug4w4i_Z64Fa6uvIQgs9UvY8cRqtoS0T9b0385owv_2Fnhm-gv2q6gyDc2QQd_cK7qBJ5HLLY3lnAgdIA9zz0xpJrFLy" alt="David L.">
-                        <div><h4 class="font-bold text-charcoal-900 text-lg">David Lowery</h4><p class="text-sm text-stone-500">Tech Lead, ScaleUp</p></div>
+                        <img class="w-14 h-14 rounded-full object-cover ring-2 ring-brass-200/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCORI6i9_-KGmMtDJ-f_X2ftKApZjVMGaG0JZI_MovQO7X9XH-jKXcbTai2n6JsYzgS3stjrLgteqnCYE3MvIp9KvjJnZUijcMxBlWPWuSos-NjdbKIzVkzNL3WLf1TRMnvcgARt2v4NZLvLebTuriuOOC2jyy5ottOvyC6iPIp_UqCzkIyug4w4i_Z64Fa6uvIQgs9UvY8cRqtoS0T9b0385owv_2Fnhm-gv2q6gyDc2QQd_cK7qBJ5HLLY3lnAgdIA9zz0xpJrFLy" alt="David L.">
+                        <div><h4 class="font-semibold text-charcoal-900 text-lg">David Lowery</h4><p class="text-sm text-stone-500">Tech Lead, ScaleUp</p></div>
                     </div>
-                    <p class="text-stone-500 mb-6 leading-relaxed italic relative z-10">"The ROI was immediate. The level of initiative Nancy's team shows is unlike any other VA service I've tried."</p>
-                    <span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold rounded-full border border-blue-100 relative z-10">20h Recovered Weekly</span>
+                    <p class="text-stone-600 mb-6 leading-relaxed italic relative z-10">"The ROI was immediate. The level of initiative Nancy's team shows is unlike any other VA service I've tried."</p>
+                    <span class="inline-block px-4 py-1.5 bg-brass-100 text-brass-700 text-xs font-mono uppercase tracking-wider rounded-full relative z-10">20h Recovered Weekly</span>
                 </div>
-                <div class="group border border-stone-100/70 rounded-2xl p-8 transition-all duration-500 bg-stone-50/50 shadow-lux hover:shadow-lux-hover fade-up delay-200 relative overflow-hidden">
-                    <svg class="absolute -top-6 -left-2 w-24 h-24 text-stone-100/70 select-none pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+                <div class="bg-white p-10 rounded-2xl border border-stone-200/60 transition-all duration-500 hover:border-brass-400 fade-up delay-200 relative overflow-hidden" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                    <svg class="absolute -top-6 -left-2 w-24 h-24 text-stone-100 select-none pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
                     <div class="flex items-center gap-4 mb-6 relative z-10">
-                        <img class="w-14 h-14 rounded-full object-cover ring-2 ring-gold-200/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzAdgSj8DzG0-jZxz4F3AUoiJz8nkuWlcG9yO8ztm537UKcXTZa4ge8xkN_LDKw72ZQBgEh2eawRpnjAYenXRGxRalqbMwyJCTwFPb7bgT7-5POIEMhZNtew3uO6YlFaIQhnfTQr5NYSydihj42dzl2bbv52cZmVFRSsL_cIx5Win8EkdDI-xJETKQY7bDH2EP18hPxpH9cPgz91YG1kUvSvI5wbMKR1Vo069AwjV8ZNiyx8eL5_PUrod5nEfrj8RaJMzYjbMDXsJ5" alt="Elena R.">
-                        <div><h4 class="font-bold text-charcoal-900 text-lg">Elena Rodriguez</h4><p class="text-sm text-stone-500">E-comm Director</p></div>
+                        <img class="w-14 h-14 rounded-full object-cover ring-2 ring-brass-200/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzAdgSj8DzG0-jZxz4F3AUoiJz8nkuWlcG9yO8ztm537UKcXTZa4ge8xkN_LDKw72ZQBgEh2eawRpnjAYenXRGxRalqbMwyJCTwFPb7bgT7-5POIEMhZNtew3uO6YlFaIQhnfTQr5NYSydihj42dzl2bbv52cZmVFRSsL_cIx5Win8EkdDI-xJETKQY7bDH2EP18hPxpH9cPgz91YG1kUvSvI5wbMKR1Vo069AwjV8ZNiyx8eL5_PUrod5nEfrj8RaJMzYjbMDXsJ5" alt="Elena R.">
+                        <div><h4 class="font-semibold text-charcoal-900 text-lg">Elena Rodriguez</h4><p class="text-sm text-stone-500">E-comm Director</p></div>
                     </div>
-                    <p class="text-stone-500 mb-6 leading-relaxed italic relative z-10">"Highly professional, responsive, and they truly care about my business growth. It's like having a COO."</p>
-                    <span class="inline-block px-4 py-1.5 bg-purple-50 text-purple-700 text-xs font-bold rounded-full border border-purple-100 relative z-10">5-Star Excellence</span>
+                    <p class="text-stone-600 mb-6 leading-relaxed italic relative z-10">"Highly professional, responsive, and they truly care about my business growth. It's like having a COO."</p>
+                    <span class="inline-block px-4 py-1.5 bg-brass-100 text-brass-700 text-xs font-mono uppercase tracking-wider rounded-full relative z-10">5-Star Excellence</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-32 lg:py-40 bg-gradient-to-br from-charcoal-900 via-charcoal-900 to-charcoal-800">
-        <div class="max-w-4xl mx-auto px-6 text-center relative">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-gold-500/10 rounded-full blur-3xl"></div>
-            <div class="relative fade-up">
-                <h2 class="font-instrument-serif text-5xl lg:text-6xl font-normal text-white mb-6 tracking-tight">Ready to Reclaim Your Time?</h2>
-                <p class="text-stone-400 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">Join the 500+ entrepreneurs who have scaled their businesses with Guestly as their secret weapon.</p>
+    <section class="py-32 md:py-48 bg-[#fcfbf9]">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="fade-up">
+                <h2 class="font-playfair text-5xl md:text-6xl font-normal text-charcoal-900 mb-8 tracking-tight">Ready to Reclaim Your Time?</h2>
+                <p class="text-stone-600 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">Join the 500+ entrepreneurs who have scaled their businesses with Guestly as their secret weapon.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-5">
-                    <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group px-10 py-5 bg-gold-500 text-charcoal-900 rounded-xl hover:bg-gold-400 transition-all font-bold text-lg shadow-xl shadow-gold-500/20 hover:shadow-gold-500/30 hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group px-10 py-5 bg-charcoal-900 text-white rounded-xl hover:bg-brass-600 transition-colors duration-700 font-semibold text-lg flex items-center justify-center gap-2">
                         Book a Strategy Call
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                     </a>
-                    <a href="#services" class="px-10 py-5 bg-white/5 text-white border-2 border-stone-700 rounded-xl hover:bg-white/10 hover:border-gold-500/50 transition-all font-bold text-lg">
+                    <a href="#services" class="px-10 py-5 border border-stone-300 text-charcoal-900 rounded-xl hover:border-brass-500 transition-colors duration-500 font-semibold text-lg">
                         Explore Services
                     </a>
                 </div>
@@ -281,31 +265,31 @@ boxShadow: {
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-32 lg:py-40 bg-stone-50">
+    <section id="contact" class="py-32 md:py-48 bg-[#fcfbf9] border-t border-stone-200/60">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16">
+            <div class="grid lg:grid-cols-2 gap-20">
                 <div class="fade-up">
-                    <span class="text-gold-600 font-bold text-sm tracking-[0.2em] uppercase">Get in Touch</span>
-                    <h2 class="font-instrument-serif text-5xl font-normal tracking-tight text-charcoal-900 mt-4 mb-6">Let's Work Together</h2>
-                    <p class="text-stone-500 text-lg mb-12 leading-relaxed">Ready to reclaim your time? Send me a message or book a discovery call to discuss how I can support your business.</p>
+                    <p class="font-mono text-brass-600 text-xs tracking-[0.2em] uppercase mb-6">Get in Touch</p>
+                    <h2 class="font-playfair text-5xl font-normal tracking-tight text-charcoal-900 mb-8">Let's Work Together</h2>
+                    <p class="text-stone-600 text-lg mb-12 leading-relaxed">Ready to reclaim your time? Send me a message or book a discovery call to discuss how I can support your business.</p>
                     <div class="space-y-5">
-                        <a href="https://wa.me/447511664281" target="_blank" class="flex items-center gap-5 p-5 bg-white rounded-xl border border-stone-100/70 hover:border-gold-300 transition-all group shadow-lux hover:shadow-lux-hover">
-                            <div class="w-12 h-12 bg-gold-500/10 rounded-xl flex items-center justify-center text-gold-600 group-hover:bg-gold-500/20 transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg></div>
-                            <div><div class="text-xs text-stone-400 uppercase tracking-wider font-bold">WhatsApp</div><div class="font-bold text-charcoal-900 text-lg">+44 7511 664281</div></div>
+                        <a href="https://wa.me/447511664281" target="_blank" class="flex items-center gap-5 p-5 bg-white rounded-xl border border-stone-200/60 hover:border-brass-400 transition-all duration-500 group" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                            <div class="w-12 h-12 bg-brass-100 rounded-xl flex items-center justify-center text-brass-600 group-hover:bg-brass-200 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg></div>
+                            <div><div class="font-mono text-xs uppercase tracking-wider text-stone-400">WhatsApp</div><div class="font-semibold text-charcoal-900 text-lg">+44 7511 664281</div></div>
                         </a>
-                        <a href="mailto:hello@nancymonaco.com" class="flex items-center gap-5 p-5 bg-white rounded-xl border border-stone-100/70 hover:border-gold-300 transition-all group shadow-lux hover:shadow-lux-hover">
-                            <div class="w-12 h-12 bg-gold-500/10 rounded-xl flex items-center justify-center text-gold-600 group-hover:bg-gold-500/20 transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg></div>
-                            <div><div class="text-xs text-stone-400 uppercase tracking-wider font-bold">Email</div><div class="font-bold text-charcoal-900 text-lg">hello@nancymonaco.com</div></div>
+                        <a href="mailto:hello@nancymonaco.com" class="flex items-center gap-5 p-5 bg-white rounded-xl border border-stone-200/60 hover:border-brass-400 transition-all duration-500 group" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                            <div class="w-12 h-12 bg-brass-100 rounded-xl flex items-center justify-center text-brass-600 group-hover:bg-brass-200 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg></div>
+                            <div><div class="font-mono text-xs uppercase tracking-wider text-stone-400">Email</div><div class="font-semibold text-charcoal-900 text-lg">hello@nancymonaco.com</div></div>
                         </a>
                     </div>
                 </div>
-                <div class="bg-white p-10 rounded-2xl border border-stone-100/70 shadow-lux fade-up delay-100">
-                    <h3 class="text-xl font-bold text-charcoal-900 mb-8">Send a Message</h3>
+                <div class="bg-white p-12 rounded-2xl border border-stone-200/60 fade-up delay-100" style="box-shadow: 0 20px 50px -20px rgba(28,25,23,0.05);">
+                    <h3 class="text-2xl font-playfair text-charcoal-900 mb-10">Send a Message</h3>
                     <form onsubmit="event.preventDefault(); window.open('https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!', '_blank');" class="space-y-6">
-                        <div><label class="block text-sm font-bold text-charcoal-900 mb-2.5">Name</label><input type="text" class="w-full px-5 py-3.5 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-gold-500/20 focus:border-gold-500 transition-all text-stone-700" placeholder="Your name"></div>
-                        <div><label class="block text-sm font-bold text-charcoal-900 mb-2.5">Email</label><input type="email" class="w-full px-5 py-3.5 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-gold-500/20 focus:border-gold-500 transition-all text-stone-700" placeholder="your@email.com"></div>
-                        <div><label class="block text-sm font-bold text-charcoal-900 mb-2.5">Message</label><textarea rows="4" class="w-full px-5 py-3.5 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-gold-500/20 focus:border-gold-500 transition-all text-stone-700" placeholder="How can I help you?"></textarea></div>
-                        <button type="submit" class="w-full py-4.5 btn-lux text-white font-bold rounded-xl shadow-lux hover:shadow-lux-hover text-lg">Send Message</button>
+                        <div><label class="block font-mono text-xs uppercase tracking-wider text-stone-500 mb-2.5">Name</label><input type="text" class="w-full px-5 py-3.5 rounded-xl bg-[#fcfbf9] border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brass-500/20 focus:border-brass-500 transition-all text-stone-700" placeholder="Your name"></div>
+                        <div><label class="block font-mono text-xs uppercase tracking-wider text-stone-500 mb-2.5">Email</label><input type="email" class="w-full px-5 py-3.5 rounded-xl bg-[#fcfbf9] border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brass-500/20 focus:border-brass-500 transition-all text-stone-700" placeholder="your@email.com"></div>
+                        <div><label class="block font-mono text-xs uppercase tracking-wider text-stone-500 mb-2.5">Message</label><textarea rows="4" class="w-full px-5 py-3.5 rounded-xl bg-[#fcfbf9] border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brass-500/20 focus:border-brass-500 transition-all text-stone-700" placeholder="How can I help you?"></textarea></div>
+                        <button type="submit" class="w-full py-4 bg-charcoal-900 text-white font-semibold rounded-xl hover:bg-brass-600 transition-colors duration-700 text-lg">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -313,7 +297,7 @@ boxShadow: {
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-stone-100 py-16">
+    <footer class="bg-[#fcfbf9] border-t border-stone-200/60 py-16">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex flex-col items-center md:items-start gap-1">
@@ -327,7 +311,7 @@ boxShadow: {
                     <a href="#contact" class="hover:text-charcoal-900 transition-colors">Contact</a>
                 </div>
             </div>
-            <div class="mt-12 pt-8 border-t border-stone-100 text-center">
+            <div class="mt-12 pt-8 border-t border-stone-200/60 text-center">
                 <p class="text-sm text-stone-400 font-medium">&copy; 2025 Guestly Services Ltd. All rights reserved.</p>
             </div>
         </div>
