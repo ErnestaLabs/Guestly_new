@@ -6,237 +6,261 @@
 <title>Guestly</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+:root {
+  --color-canvas-primary: #FBF9F6;
+  --color-canvas-dark: #0D0D0D;
+  --color-surface-card: #FFFFFF;
+  --color-text-primary: #0D0D0D;
+  --color-text-muted: #5A544E;
+  --color-text-light: #FBF9F6;
+  --color-border: rgba(13, 13, 13, 0.08);
+  --color-accent: #D4AF37;
+}
 body {
-background-color: #F4F1EC;
-font-family: 'Jost', sans-serif;
-color: #1A1A1A;
-overflow-x: hidden;
+background-color: var(--color-canvas-primary);
+font-family: 'Inter', sans-serif;
+color: var(--color-text-primary);
+}
+* {
+transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 </style>
 </head>
-<body class="antialiased selection:bg-[#8C7B6B]/20 selection:text-[#1A1A1A]">
+<body class="antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-[#F4F1EC]/80 backdrop-blur-md border-b border-[#1A1A1A]/10 transition-all">
-        <div class="grid grid-cols-12 gap-4 px-4 md:px-12 h-20 items-center">
-            <a href="#" class="col-span-4 font-['Playfair_Display'] text-xl tracking-tight text-[#1A1A1A]">Guestly</a>
-            <div class="col-span-8 hidden md:flex items-center justify-end gap-10 font-['Jost'] text-sm font-light text-[#4A4A4A]">
-                <a href="#about" class="hover:text-[#1A1A1A] transition-colors">About</a>
-                <a href="#services" class="hover:text-[#1A1A1A] transition-colors">Services</a>
-                <a href="#testimonials" class="hover:text-[#1A1A1A] transition-colors">Testimonials</a>
-                <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group inline-flex items-center gap-2 font-['Jost'] text-[11px] uppercase tracking-[0.3em] text-[#1A1A1A] border-b border-[#1A1A1A] pb-1 hover:text-[#8C7B6B] hover:border-[#8C7B6B] transition-colors duration-700">
-                    Book a Call <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
+    <nav class="absolute top-0 left-0 w-full z-50 bg-transparent border-b" style="border-color: var(--color-border);">
+        <div class="max-w-[1400px] mx-auto px-8 md:px-16 h-20 flex items-center justify-between">
+            <span class="font-['Cormorant_Garamond'] text-xl tracking-tight text-[var(--color-text-primary)]">Guestly</span>
+            <div class="hidden md:flex items-center gap-10">
+                <a href="#about" class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]">About</a>
+                <a href="#services" class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]">Services</a>
+                <a href="#contact" class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]">Contact</a>
+                <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium text-[var(--color-text-primary)] border-b pb-0.5" style="border-color: var(--color-text-primary);">
+                    Book a Call
                 </a>
             </div>
-            <button class="col-span-8 text-right md:hidden text-[#1A1A1A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+            <button class="md:hidden text-[var(--color-text-primary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
             </button>
         </div>
     </nav>
 
-    <!-- Hero - Magazine Cover -->
-    <section class="h-screen min-h-[700px] relative flex items-end overflow-hidden">
-        <div class="absolute inset-0 w-full h-full z-0">
-            <div class="absolute right-0 top-0 w-1/2 h-full overflow-hidden">
-                <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="w-full h-full object-cover object-top">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
-        </div>
-        <div class="grid grid-cols-12 gap-4 px-4 md:px-12 relative z-10 w-full pb-16 md:pb-24">
-            <div class="col-span-12 md:col-span-8">
-                <h1 class="font-['Playfair_Display'] text-[12vw] leading-[0.85] font-normal text-white">
+    <!-- Hero - Vogue Cover -->
+    <section class="h-screen min-h-[700px] flex">
+        <div class="w-1/2 flex items-end p-8 md:p-16 pb-16 md:pb-24" style="background-color: var(--color-canvas-primary);">
+            <div class="max-w-lg">
+                <h1 class="font-['Cormorant_Garamond'] text-[5vw] md:text-[5.5vw] leading-[0.9] font-normal tracking-[-0.02em] text-[var(--color-text-primary)] mb-10">
                     Stop Working<br>
                     <em class="italic">60-Hour Weeks</em>
                 </h1>
+                <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="inline-block font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium text-[var(--color-text-primary)] border-b pb-1" style="border-color: var(--color-text-primary);">
+                    Hire Me
+                </a>
             </div>
         </div>
-        <div class="absolute bottom-12 right-4 md:right-12 max-w-xs text-right z-10">
-            <p class="font-['Jost'] text-sm text-white/80 leading-relaxed mb-6">
-                Finally, a virtual assistant who actually understands your business. Get 15+ hours back every week.
-            </p>
-            <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group inline-flex items-center gap-2 font-['Jost'] text-[11px] uppercase tracking-[0.3em] text-white border-b border-white pb-1 hover:opacity-60 transition-opacity duration-700">
-                Hire Me <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
-            </a>
+        <div class="w-1/2 h-full overflow-hidden" style="background-color: var(--color-canvas-primary);">
+            <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="w-full h-full object-cover object-top">
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="min-h-screen flex items-center py-24">
-        <div class="grid grid-cols-12 gap-4 px-4 md:px-12 w-full">
-            <div class="col-span-12 md:col-span-5 md:col-start-2">
-                <p class="font-['Jost'] text-[10px] uppercase tracking-[0.4em] text-[#8C7B6B] mb-6">About</p>
-                <h2 class="font-['Playfair_Display'] text-[5vw] leading-[0.9] font-normal text-[#1A1A1A]">Nancy Monaco</h2>
-            </div>
-            <div class="col-span-12 md:col-span-4 md:col-start-8 mt-12 md:mt-0">
-                <p class="font-['Jost'] text-lg font-light text-[#4A4A4A] leading-[1.8] mb-10">
-                    After years in customer service, I saw too many entrepreneurs burn out because they were the single point of failure in their own business. I didn't start Guestly to complete tasks. I started it to help owners build autonomous operations.
+    <!-- About - Authority Statement -->
+    <section id="about" class="py-32 md:py-48" style="background-color: var(--color-canvas-primary);">
+        <div class="max-w-[720px] mx-auto px-8 md:px-16">
+            <p class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium text-[var(--color-text-muted)] mb-8">About</p>
+            <div class="space-y-8">
+                <p class="font-['Cormorant_Garamond'] text-[32px] leading-[1.4] text-[var(--color-text-primary)] font-normal">
+                    After years in customer service, I saw too many entrepreneurs burn out because they were the single point of failure in their own business. I didn't start Guestly to complete tasks. I started it to help owners build <em class="italic">autonomous operations</em>.
                 </p>
-                <div class="space-y-6">
-                    <div><span class="font-['Playfair_Display'] text-xl text-[#1A1A1A] block">Strategic Operations Partner</span><span class="font-['Jost'] font-light text-[#4A4A4A] text-sm">for entrepreneurs scaling their business</span></div>
-                    <div><span class="font-['Playfair_Display'] text-xl text-[#1A1A1A] block">Autonomous Operations</span><span class="font-['Jost'] font-light text-[#4A4A4A] text-sm">not just task lists that keep you dependent</span></div>
-                    <div><span class="font-['Playfair_Display'] text-xl text-[#1A1A1A] block">15+ Hours Saved Weekly</span><span class="font-['Jost'] font-light text-[#4A4A4A] text-sm">per client, on average</span></div>
-                    <div><span class="font-['Playfair_Display'] text-xl text-[#1A1A1A] block">500+ Businesses Served</span><span class="font-['Jost'] font-light text-[#4A4A4A] text-sm">and counting</span></div>
-                </div>
-                <div class="mt-16 border-l-2 border-[#1A1A1A]/20 pl-6">
-                    <p class="font-['Playfair_Display'] italic text-2xl text-[#1A1A1A] leading-relaxed">
-                        "My success isn't measured by how many hours I work. It's measured by how many hours <em class="italic text-[#8C7B6B]">you</em> get back."
-                    </p>
-                    <p class="font-['Playfair_Display'] text-base text-[#8C7B6B] mt-4">Nancy Monaco, Founder of Guestly</p>
-                </div>
+                <p class="font-['Cormorant_Garamond'] text-[32px] leading-[1.4] text-[var(--color-text-primary)] font-normal">
+                    With over 500 businesses served and 15+ hours saved weekly per client, I bring the rigor of a corporate Chief of Staff to your daily operations.
+                </p>
+            </div>
+            <div class="mt-16" style="border-left: 2px solid rgba(13,13,13,0.08); padding-left: 24px;">
+                <p class="font-['Cormorant_Garamond'] italic text-2xl leading-relaxed text-[var(--color-text-primary)]">
+                    "My success isn't measured by how many hours I work. It's measured by how many hours <span style="color: var(--color-accent);">you</span> get back."
+                </p>
+                <p class="font-['Cormorant_Garamond'] text-base mt-4" style="color: var(--color-accent);">Nancy Monaco, Founder of Guestly</p>
             </div>
         </div>
     </section>
 
-    <!-- Services - Editorial Index -->
-    <section id="services" class="min-h-screen flex items-center py-24 bg-[#EDE8E3]">
-        <div class="grid grid-cols-12 gap-4 px-4 md:px-12 w-full">
-            <div class="col-span-12 md:col-span-3 md:col-start-2 mb-12 md:mb-0">
-                <p class="font-['Jost'] text-[10px] uppercase tracking-[0.4em] text-[#8C7B6B] mb-6">Services</p>
-                <h2 class="font-['Playfair_Display'] text-[5vw] leading-[0.9] font-normal text-[#1A1A1A]">What I Do</h2>
-            </div>
-            <div class="col-span-12 md:col-span-7 md:col-start-6">
-                <div class="border-b border-[#1A1A1A]/20"></div>
-                <div class="grid grid-cols-12 gap-4 border-b border-[#1A1A1A]/20 py-8 items-center">
-                    <span class="col-span-1 font-['Jost'] text-xs text-[#8C7B6B]">01</span>
-                    <span class="col-span-6 font-['Playfair_Display'] text-3xl md:text-4xl text-[#1A1A1A]">Strategic Planning</span>
-                    <span class="col-span-4 font-['Jost'] text-sm text-[#4A4A4A] font-light">Calendar management and executive assistance tailored to your business objectives.</span>
-                    <span class="col-span-1 text-right text-2xl text-[#8C7B6B]">→</span>
+    <!-- Services - Executive Tier Accordion -->
+    <section id="services" class="py-32 md:py-48" style="background-color: var(--color-canvas-primary); border-top: 1px solid var(--color-border);">
+        <div class="max-w-[1100px] mx-auto px-8 md:px-16">
+            <p class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium text-[var(--color-text-muted)] mb-12">Services</p>
+            
+            <div class="border-b" style="border-color: var(--color-border);">
+                <div class="flex items-center justify-between py-8 cursor-pointer">
+                    <span class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium" style="color: var(--color-accent);">SUITE I</span>
+                    <span class="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-[var(--color-text-primary)]">Strategic Planning</span>
+                    <span class="font-['Inter'] text-lg text-[var(--color-text-muted)]">+</span>
                 </div>
-                <div class="grid grid-cols-12 gap-4 border-b border-[#1A1A1A]/20 py-8 items-center">
-                    <span class="col-span-1 font-['Jost'] text-xs text-[#8C7B6B]">02</span>
-                    <span class="col-span-6 font-['Playfair_Display'] text-3xl md:text-4xl text-[#1A1A1A]">Ops &amp; Systems</span>
-                    <span class="col-span-4 font-['Jost'] text-sm text-[#4A4A4A] font-light">Streamline your backend processes with custom automations and CRM management.</span>
-                    <span class="col-span-1 text-right text-2xl text-[#8C7B6B]">→</span>
-                </div>
-                <div class="grid grid-cols-12 gap-4 border-b border-[#1A1A1A]/20 py-8 items-center">
-                    <span class="col-span-1 font-['Jost'] text-xs text-[#8C7B6B]">03</span>
-                    <span class="col-span-6 font-['Playfair_Display'] text-3xl md:text-4xl text-[#1A1A1A]">Customer Success</span>
-                    <span class="col-span-4 font-['Jost'] text-sm text-[#4A4A4A] font-light">White-glove communication that keeps your clients happy and retention high.</span>
-                    <span class="col-span-1 text-right text-2xl text-[#8C7B6B]">→</span>
-                </div>
-                <div class="grid grid-cols-12 gap-4 border-b border-[#1A1A1A]/20 py-8 items-center">
-                    <span class="col-span-1 font-['Jost'] text-xs text-[#8C7B6B]">04</span>
-                    <span class="col-span-6 font-['Playfair_Display'] text-3xl md:text-4xl text-[#1A1A1A]">Inbox Management</span>
-                    <span class="col-span-4 font-['Jost'] text-sm text-[#4A4A4A] font-light">Full inbox triage, response drafting, and priority flagging so you never miss a message.</span>
-                    <span class="col-span-1 text-right text-2xl text-[#8C7B6B]">→</span>
-                </div>
-                <div class="grid grid-cols-12 gap-4 border-b border-[#1A1A1A]/20 py-8 items-center">
-                    <span class="col-span-1 font-['Jost'] text-xs text-[#8C7B6B]">05</span>
-                    <span class="col-span-6 font-['Playfair_Display'] text-3xl md:text-4xl text-[#1A1A1A]">Research &amp; Reporting</span>
-                    <span class="col-span-4 font-['Jost'] text-sm text-[#4A4A4A] font-light">Competitive analysis and data-backed recommendations.</span>
-                    <span class="col-span-1 text-right text-2xl text-[#8C7B6B]">→</span>
-                </div>
-                <div class="grid grid-cols-12 gap-4 py-8 items-center">
-                    <span class="col-span-1 font-['Jost'] text-xs text-[#8C7B6B]">06</span>
-                    <span class="col-span-6 font-['Playfair_Display'] text-3xl md:text-4xl text-[#1A1A1A]">Custom Requests</span>
-                    <span class="col-span-4 font-['Jost'] text-sm text-[#4A4A4A] font-light">I adapt quickly to new tools and processes.</span>
-                    <span class="col-span-1 text-right"><a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I%20have%20a%20custom%20request." target="_blank" class="text-2xl text-[#8C7B6B] hover:text-[#1A1A1A] transition-colors">→</a></span>
+                <div class="pb-8 hidden">
+                    <p class="font-['Inter'] text-sm font-light text-[var(--color-text-muted)] leading-relaxed max-w-2xl">Calendar management and executive assistance tailored to your business objectives.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Metrics -->
-    <section class="relative min-h-[60vh] flex items-center py-24">
-        <div class="grid grid-cols-12 gap-4 px-4 md:px-12 w-full">
-            <div class="col-span-12 md:col-span-10 md:col-start-2 grid grid-cols-2 md:grid-cols-4 gap-12">
-                <div class="text-center"><div class="font-['Playfair_Display'] text-[6vw] font-normal leading-none text-[#1A1A1A]">500+</div><div class="font-['Jost'] text-[10px] uppercase tracking-[0.3em] text-[#8C7B6B] mt-4">Businesses Served</div></div>
-                <div class="text-center"><div class="font-['Playfair_Display'] text-[6vw] font-normal leading-none text-[#1A1A1A]">15+</div><div class="font-['Jost'] text-[10px] uppercase tracking-[0.3em] text-[#8C7B6B] mt-4">Hours Saved Weekly</div></div>
-                <div class="text-center"><div class="font-['Playfair_Display'] text-[6vw] font-normal leading-none text-[#1A1A1A]">100%</div><div class="font-['Jost'] text-[10px] uppercase tracking-[0.3em] text-[#8C7B6B] mt-4">Satisfaction Rate</div></div>
-                <div class="text-center"><div class="font-['Playfair_Display'] text-[6vw] font-normal leading-none text-[#1A1A1A]">£2.4K</div><div class="font-['Jost'] text-[10px] uppercase tracking-[0.3em] text-[#8C7B6B] mt-4">Avg Monthly Saved</div></div>
+            
+            <div class="border-b" style="border-color: var(--color-border);">
+                <div class="flex items-center justify-between py-8 cursor-pointer">
+                    <span class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium" style="color: var(--color-accent);">SUITE II</span>
+                    <span class="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-[var(--color-text-primary)]">Ops &amp; Systems</span>
+                    <span class="font-['Inter'] text-lg text-[var(--color-text-muted)]">+</span>
+                </div>
+                <div class="pb-8 hidden">
+                    <p class="font-['Inter'] text-sm font-light text-[var(--color-text-muted)] leading-relaxed max-w-2xl">Streamline your backend processes with custom automations and CRM management.</p>
+                </div>
+            </div>
+            
+            <div class="border-b" style="border-color: var(--color-border);">
+                <div class="flex items-center justify-between py-8 cursor-pointer">
+                    <span class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium" style="color: var(--color-accent);">SUITE III</span>
+                    <span class="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-[var(--color-text-primary)]">Customer Success</span>
+                    <span class="font-['Inter'] text-lg text-[var(--color-text-muted)]">+</span>
+                </div>
+                <div class="pb-8 hidden">
+                    <p class="font-['Inter'] text-sm font-light text-[var(--color-text-muted)] leading-relaxed max-w-2xl">White-glove communication that keeps your clients happy and your retention high.</p>
+                </div>
+            </div>
+            
+            <div class="border-b" style="border-color: var(--color-border);">
+                <div class="flex items-center justify-between py-8 cursor-pointer">
+                    <span class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium" style="color: var(--color-accent);">SUITE IV</span>
+                    <span class="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-[var(--color-text-primary)]">Inbox Management</span>
+                    <span class="font-['Inter'] text-lg text-[var(--color-text-muted)]">+</span>
+                </div>
+                <div class="pb-8 hidden">
+                    <p class="font-['Inter'] text-sm font-light text-[var(--color-text-muted)] leading-relaxed max-w-2xl">Full inbox triage, response drafting, and priority flagging so you never miss a critical message.</p>
+                </div>
+            </div>
+            
+            <div class="border-b" style="border-color: var(--color-border);">
+                <div class="flex items-center justify-between py-8 cursor-pointer">
+                    <span class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium" style="color: var(--color-accent);">SUITE V</span>
+                    <span class="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-[var(--color-text-primary)]">Research &amp; Reporting</span>
+                    <span class="font-['Inter'] text-lg text-[var(--color-text-muted)]">+</span>
+                </div>
+                <div class="pb-8 hidden">
+                    <p class="font-['Inter'] text-sm font-light text-[var(--color-text-muted)] leading-relaxed max-w-2xl">Competitive analysis, data-backed recommendations, and portfolio efficiency audits.</p>
+                </div>
+            </div>
+            
+            <div class="border-b" style="border-color: var(--color-border);">
+                <div class="flex items-center justify-between py-8">
+                    <span class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium" style="color: var(--color-accent);">SUITE VI</span>
+                    <span class="font-['Cormorant_Garamond'] text-2xl md:text-3xl text-[var(--color-text-primary)]">Custom Requests</span>
+                    <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I%20have%20a%20custom%20request." target="_blank" class="font-['Inter'] text-lg text-[var(--color-text-muted)] hover:text-[var(--color-accent)]">→</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="min-h-screen flex items-center py-24 bg-[#EDE8E3]">
-        <div class="grid grid-cols-12 gap-4 px-4 md:px-12 w-full">
-            <div class="col-span-12 md:col-span-3 md:col-start-2 mb-12 md:mb-0">
-                <p class="font-['Jost'] text-[10px] uppercase tracking-[0.4em] text-[#8C7B6B] mb-6">Testimonials</p>
-                <h2 class="font-['Playfair_Display'] text-[5vw] leading-[0.9] font-normal text-[#1A1A1A]">The Wall of Love</h2>
-            </div>
-            <div class="col-span-12 md:col-span-7 md:col-start-6 space-y-20">
+    <section id="testimonials" class="py-32 md:py-48" style="background-color: var(--color-canvas-primary);">
+        <div class="max-w-[720px] mx-auto px-8 md:px-16">
+            <p class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium text-[var(--color-text-muted)] mb-12">Testimonials</p>
+            <div class="space-y-20">
                 <div>
-                    <p class="font-['Playfair_Display'] italic text-3xl md:text-4xl leading-tight text-[#1A1A1A]">"Guestly didn't just take over my emails. They completely redesigned my client onboarding process. I've never felt more organized."</p>
-                    <p class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mt-6">Sarah Jenkins, Founder of Bloom Agency</p>
+                    <p class="font-['Cormorant_Garamond'] italic text-3xl md:text-4xl leading-tight text-[var(--color-text-primary)]">"Guestly didn't just take over my emails. They completely redesigned my client onboarding process. I've never felt more organized."</p>
+                    <p class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium text-[var(--color-text-muted)] mt-8">Sarah Jenkins, Founder of Bloom Agency</p>
                 </div>
                 <div>
-                    <p class="font-['Playfair_Display'] italic text-3xl md:text-4xl leading-tight text-[#1A1A1A]">"The ROI was immediate. The level of initiative Nancy's team shows is unlike any other VA service."</p>
-                    <p class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mt-6">David Lowery, Tech Lead at ScaleUp</p>
+                    <p class="font-['Cormorant_Garamond'] italic text-3xl md:text-4xl leading-tight text-[var(--color-text-primary)]">"The ROI was immediate. The level of initiative Nancy's team shows is unlike any other VA service."</p>
+                    <p class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium text-[var(--color-text-muted)] mt-8">David Lowery, Tech Lead at ScaleUp</p>
                 </div>
                 <div>
-                    <p class="font-['Playfair_Display'] italic text-3xl md:text-4xl leading-tight text-[#1A1A1A]">"Highly professional, responsive, and they truly care about my business growth. It's like having a COO."</p>
-                    <p class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mt-6">Elena Rodriguez, E-comm Director</p>
+                    <p class="font-['Cormorant_Garamond'] italic text-3xl md:text-4xl leading-tight text-[var(--color-text-primary)]">"Highly professional, responsive, and they truly care about my business growth. It's like having a COO."</p>
+                    <p class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium text-[var(--color-text-muted)] mt-8">Elena Rodriguez, E-comm Director</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="min-h-screen flex items-center py-24">
-        <div class="grid grid-cols-12 gap-4 px-4 md:px-12 w-full">
-            <div class="col-span-12 md:col-span-8 md:col-start-3 text-center">
-                <p class="font-['Jost'] text-[10px] uppercase tracking-[0.4em] text-[#8C7B6B] mb-6">Let's Begin</p>
-                <h2 class="font-['Playfair_Display'] text-[5vw] leading-[0.9] font-normal text-[#1A1A1A] mb-10">Ready to Reclaim Your Time?</h2>
-                <p class="font-['Jost'] text-lg font-light text-[#4A4A4A] leading-[1.8] mb-14 max-w-xl mx-auto">Join the 500+ entrepreneurs who have scaled their businesses with Guestly as their secret weapon.</p>
-                <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group inline-flex items-center gap-3 font-['Jost'] text-[11px] uppercase tracking-[0.3em] text-[#1A1A1A] border-b border-[#1A1A1A] pb-2 hover:text-[#8C7B6B] hover:border-[#8C7B6B] transition-colors duration-700">
-                    Book a Strategy Call <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
+    <section class="py-32 md:py-48" style="background-color: var(--color-canvas-primary); border-top: 1px solid var(--color-border);">
+        <div class="max-w-[720px] mx-auto px-8 md:px-16 text-center">
+            <h2 class="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-normal tracking-[-0.02em] text-[var(--color-text-primary)] mb-8">Ready to Reclaim<br><em class="italic">Your Time?</em></h2>
+            <p class="font-['Inter'] text-sm font-light text-[var(--color-text-muted)] leading-relaxed mb-12 max-w-md mx-auto">Join the 500+ entrepreneurs who have scaled their businesses with Guestly as their secret weapon.</p>
+            <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="inline-block font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium text-[var(--color-text-primary)] border-b pb-1" style="border-color: var(--color-text-primary);">
+                Book a Strategy Call
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact - Gatekeeper Intake Dossier -->
+    <section id="contact" class="py-32 md:py-48" style="background-color: var(--color-canvas-dark);">
+        <div class="max-w-[720px] mx-auto px-8 md:px-16">
+            <p class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium mb-8" style="color: rgba(251,249,246,0.5);">Contact</p>
+            <h2 class="font-['Cormorant_Garamond'] text-5xl md:text-6xl font-normal tracking-[-0.02em] text-[var(--color-text-light)] mb-8">Let's Work Together</h2>
+            <p class="font-['Inter'] text-sm font-light leading-relaxed mb-16 max-w-md" style="color: rgba(251,249,246,0.6);">Ready to reclaim your time? Send me a message to discuss how I can support your business.</p>
+            
+            <form onsubmit="event.preventDefault(); window.open('https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!', '_blank');" class="space-y-8 mb-16">
+                <div>
+                    <label class="block font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium mb-3" style="color: rgba(251,249,246,0.5);">Name</label>
+                    <input type="text" class="w-full px-0 py-3 bg-transparent border-0 font-['Inter'] text-sm font-light text-[var(--color-text-light)]" style="border-bottom: 1px solid rgba(255,255,255,0.2); outline: none;" placeholder="Your name">
+                </div>
+                <div>
+                    <label class="block font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium mb-3" style="color: rgba(251,249,246,0.5);">Email</label>
+                    <input type="email" class="w-full px-0 py-3 bg-transparent border-0 font-['Inter'] text-sm font-light text-[var(--color-text-light)]" style="border-bottom: 1px solid rgba(255,255,255,0.2); outline: none;" placeholder="your@email.com">
+                </div>
+                <div>
+                    <label class="block font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium mb-3" style="color: rgba(251,249,246,0.5);">Message</label>
+                    <textarea rows="4" class="w-full px-0 py-3 bg-transparent border-0 font-['Inter'] text-sm font-light text-[var(--color-text-light)] resize-none" style="border-bottom: 1px solid rgba(255,255,255,0.2); outline: none;" placeholder="How can I help you?"></textarea>
+                </div>
+                <button type="submit" class="w-full py-5 font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium" style="background-color: var(--color-text-light); color: var(--color-text-primary); border-radius: 0px;">
+                    Send Message
+                </button>
+            </form>
+
+            <div class="space-y-6">
+                <a href="https://wa.me/447511664281" target="_blank" class="block">
+                    <p class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium mb-1" style="color: rgba(251,249,246,0.5);">WhatsApp</p>
+                    <p class="font-['Cormorant_Garamond'] text-xl text-[var(--color-text-light)]">+44 7511 664281</p>
+                </a>
+                <a href="mailto:hello@nancymonaco.com" class="block">
+                    <p class="font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium mb-1" style="color: rgba(251,249,246,0.5);">Email</p>
+                    <p class="font-['Cormorant_Garamond'] text-xl text-[var(--color-text-light)]">hello@nancymonaco.com</p>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="min-h-screen flex items-center py-24 bg-[#EDE8E3]">
-        <div class="grid grid-cols-12 gap-4 px-4 md:px-12 w-full">
-            <div class="col-span-12 md:col-span-5 md:col-start-2">
-                <p class="font-['Jost'] text-[10px] uppercase tracking-[0.4em] text-[#8C7B6B] mb-6">Contact</p>
-                <h2 class="font-['Playfair_Display'] text-[5vw] leading-[0.9] font-normal text-[#1A1A1A] mb-8">Let's Work Together</h2>
-                <p class="font-['Jost'] text-lg font-light text-[#4A4A4A] leading-[1.8] mb-16 max-w-sm">Ready to reclaim your time? Send me a message to discuss how I can support your business.</p>
-                <div class="space-y-6">
-                    <a href="https://wa.me/447511664281" target="_blank" class="block">
-                        <p class="font-['Jost'] text-[10px] uppercase tracking-[0.4em] text-[#8C7B6B] mb-1">WhatsApp</p>
-                        <p class="font-['Playfair_Display'] text-2xl text-[#1A1A1A]">+44 7511 664281</p>
-                    </a>
-                    <a href="mailto:hello@nancymonaco.com" class="block">
-                        <p class="font-['Jost'] text-[10px] uppercase tracking-[0.4em] text-[#8C7B6B] mb-1">Email</p>
-                        <p class="font-['Playfair_Display'] text-2xl text-[#1A1A1A]">hello@nancymonaco.com</p>
-                    </a>
-                </div>
+    <!-- Footer -->
+    <footer class="py-16" style="background-color: var(--color-canvas-primary); border-top: 1px solid var(--color-border);">
+        <div class="max-w-[1400px] mx-auto px-8 md:px-16 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start gap-1">
+                <span class="font-['Cormorant_Garamond'] text-xl text-[var(--color-text-primary)]">Guestly</span>
+                <p class="font-['Inter'] text-sm font-light text-[var(--color-text-muted)]">Your Remote Business Partner</p>
             </div>
-            <div class="col-span-12 md:col-span-4 md:col-start-8 mt-12 md:mt-0">
-                <form onsubmit="event.preventDefault(); window.open('https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!', '_blank');" class="space-y-8">
-                    <div><label class="block font-['Jost'] text-[10px] uppercase tracking-wider text-[#8C7B6B] mb-3">Name</label><input type="text" class="w-full px-0 py-3 bg-transparent border-0 border-b border-[#1A1A1A]/20 focus:outline-none focus:border-[#1A1A1A] transition-colors font-['Jost'] font-light text-[#1A1A1A] text-lg" placeholder="Your name"></div>
-                    <div><label class="block font-['Jost'] text-[10px] uppercase tracking-wider text-[#8C7B6B] mb-3">Email</label><input type="email" class="w-full px-0 py-3 bg-transparent border-0 border-b border-[#1A1A1A]/20 focus:outline-none focus:border-[#1A1A1A] transition-colors font-['Jost'] font-light text-[#1A1A1A] text-lg" placeholder="your@email.com"></div>
-                    <div><label class="block font-['Jost'] text-[10px] uppercase tracking-wider text-[#8C7B6B] mb-3">Message</label><textarea rows="4" class="w-full px-0 py-3 bg-transparent border-0 border-b border-[#1A1A1A]/20 focus:outline-none focus:border-[#1A1A1A] transition-colors font-['Jost'] font-light text-[#1A1A1A] text-lg resize-none" placeholder="How can I help you?"></textarea></div>
-                    <button type="submit" class="group inline-flex items-center gap-3 font-['Jost'] text-[11px] uppercase tracking-[0.3em] text-[#1A1A1A] border-b border-[#1A1A1A] pb-2 hover:text-[#8C7B6B] hover:border-[#8C7B6B] transition-colors duration-700">
-                        Send Message <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
-                    </button>
-                </form>
+            <div class="flex gap-10 font-['Inter'] text-[11px] uppercase tracking-[0.18em] font-medium text-[var(--color-text-muted)]">
+                <a href="#about" class="hover:text-[var(--color-text-primary)]">About</a>
+                <a href="#services" class="hover:text-[var(--color-text-primary)]">Services</a>
+                <a href="#testimonials" class="hover:text-[var(--color-text-primary)]">Testimonials</a>
+                <a href="#contact" class="hover:text-[var(--color-text-primary)]">Contact</a>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-16 border-t border-[#1A1A1A]/10">
-        <div class="grid grid-cols-12 gap-4 px-4 md:px-12">
-            <div class="col-span-12 md:col-span-4 flex flex-col items-center md:items-start gap-1">
-                <span class="font-['Playfair_Display'] text-xl text-[#1A1A1A]">Guestly</span>
-                <p class="font-['Jost'] text-sm font-light text-[#4A4A4A]">Your Remote Business Partner</p>
-            </div>
-            <div class="col-span-12 md:col-span-4 flex justify-center gap-10 font-['Jost'] text-sm font-light text-[#4A4A4A] mt-8 md:mt-0">
-                <a href="#about" class="hover:text-[#1A1A1A] transition-colors">About</a>
-                <a href="#services" class="hover:text-[#1A1A1A] transition-colors">Services</a>
-                <a href="#testimonials" class="hover:text-[#1A1A1A] transition-colors">Testimonials</a>
-                <a href="#contact" class="hover:text-[#1A1A1A] transition-colors">Contact</a>
-            </div>
-            <div class="col-span-12 md:col-span-4 text-center md:text-right mt-8 md:mt-0">
-                <p class="font-['Jost'] text-sm font-light text-[#4A4A4A]">&copy; 2025 Guestly Services Ltd.</p>
-            </div>
+        <div class="max-w-[1400px] mx-auto px-8 md:px-16 mt-12 pt-8 text-center" style="border-top: 1px solid var(--color-border);">
+            <p class="font-['Inter'] text-sm font-light text-[var(--color-text-muted)]">&copy; 2025 Guestly Services Ltd. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+    // Accordion toggle
+    document.querySelectorAll('.border-b > .flex.cursor-pointer').forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            if (content && content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                header.querySelector('span:last-child').textContent = '−';
+            } else if (content) {
+                content.classList.add('hidden');
+                header.querySelector('span:last-child').textContent = '+';
+            }
+        });
+    });
+    </script>
 
 </body>
 </html>
