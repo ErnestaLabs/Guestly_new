@@ -7,200 +7,199 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
 body {
+background-color: #F7F4F1;
 font-family: 'Inter', sans-serif;
-background-color: #fcfbf9;
+color: #1A1A1A;
+}
+body::before {
+content: "";
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: 9999;
+opacity: 0.03;
+background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 </style>
-<script>
-tailwind.config = {
-theme: {
-extend: {
-fontFamily: {
-serif: ['Cormorant Garamond', 'serif'],
-sans: ['Inter', 'sans-serif'],
-},
-},
-},
-}
-</script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap">
 </head>
-<body class="font-sans text-stone-500 antialiased selection:bg-stone-200 selection:text-stone-900 bg-[#fcfbf9]">
+<body class="antialiased selection:bg-[#8C7B6B]/20 selection:text-[#1A1A1A]">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-[#fcfbf9]/80 backdrop-blur-md border-b border-stone-200/60 transition-all">
-        <div class="flex h-20 max-w-7xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
-            <a href="#" class="font-serif text-2xl tracking-tight text-stone-900 font-normal">Guestly</a>
-            <div class="hidden md:flex items-center gap-10 text-sm font-medium text-stone-400">
-                <a href="#about" class="hover:text-stone-900 transition-colors">About</a>
-                <a href="#services" class="hover:text-stone-900 transition-colors">Services</a>
-                <a href="#testimonials" class="hover:text-stone-900 transition-colors">Testimonials</a>
-                <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="text-lg font-serif text-stone-900 border-b border-stone-900 pb-0.5 hover:border-stone-400 hover:text-stone-400 transition-colors duration-700">
-                    Book a Call →
+    <nav class="fixed top-0 w-full z-50 bg-[#F7F4F1]/80 backdrop-blur-md border-b border-[#E0DBD5] transition-all">
+        <div class="max-w-[1400px] mx-auto px-8 md:px-16 flex h-20 items-center justify-between">
+            <a href="#" class="font-['Cormorant_Garamond'] text-2xl tracking-[-0.02em] text-[#1A1A1A] font-normal">Guestly</a>
+            <div class="hidden md:flex items-center gap-12 font-['Inter'] text-sm font-light text-[#5C5C5C]">
+                <a href="#about" class="hover:text-[#1A1A1A] transition-colors">About</a>
+                <a href="#services" class="hover:text-[#1A1A1A] transition-colors">Services</a>
+                <a href="#testimonials" class="hover:text-[#1A1A1A] transition-colors">Testimonials</a>
+                <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group inline-flex items-center gap-2 font-['Inter'] text-sm uppercase tracking-[0.2em] text-[#1A1A1A] border-b border-[#1A1A1A] pb-1 hover:border-[#8C7B6B] hover:text-[#8C7B6B] transition-colors duration-500">
+                    Book a Call <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
                 </a>
             </div>
-            <button class="md:hidden text-stone-900">
+            <button class="md:hidden text-[#1A1A1A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
             </button>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="pt-44 md:pt-60 pb-0 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6">
+    <section class="relative min-h-screen overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-8 md:px-16 relative z-10">
             <div class="grid grid-cols-12">
-                <div class="col-span-12 md:col-span-7 md:col-start-1 relative z-10">
-                    <p class="font-mono text-xs tracking-[0.3em] uppercase text-stone-400 mb-8">Executive Assistance</p>
-                    <h1 class="font-serif text-8xl md:text-[10rem] leading-[0.8] font-normal text-stone-900 mb-10">
+                <div class="col-span-12 md:col-span-7 mt-24 md:mt-48 relative z-10">
+                    <p class="font-['Inter'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mb-8 font-light">Executive Assistance</p>
+                    <h1 class="font-['Cormorant_Garamond'] text-7xl md:text-[8rem] leading-[0.85] font-normal tracking-[-0.02em] text-[#1A1A1A] mb-10">
                         Stop Working<br>
                         <span class="italic">60-Hour Weeks</span>
                     </h1>
-                    <p class="text-lg font-light text-stone-500 leading-loose max-w-lg mb-12">
+                    <p class="font-['Inter'] text-base md:text-lg font-light text-[#5C5C5C] leading-[1.8] max-w-lg mb-12">
                         Finally, a virtual assistant who actually understands your business. Get 15+ hours back every week without hiring full-time staff.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-10 items-start">
-                        <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="text-lg font-serif text-stone-900 border-b border-stone-900 pb-1 hover:border-stone-400 hover:text-stone-400 transition-colors duration-700 flex items-center gap-2 group">
+                        <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group inline-flex items-center gap-3 font-['Inter'] text-sm uppercase tracking-[0.2em] text-[#1A1A1A] border-b border-[#1A1A1A] pb-2 hover:border-[#8C7B6B] hover:text-[#8C7B6B] transition-colors duration-500">
                             Hire Me
                             <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
                         </a>
-                        <a href="#services" class="text-lg font-serif text-stone-400 border-b border-stone-400 pb-1 hover:border-stone-900 hover:text-stone-900 transition-colors duration-700 flex items-center gap-2 group">
+                        <a href="#services" class="group inline-flex items-center gap-3 font-['Inter'] text-sm uppercase tracking-[0.2em] text-[#5C5C5C] border-b border-[#5C5C5C] pb-2 hover:border-[#8C7B6B] hover:text-[#8C7B6B] transition-colors duration-500">
                             View Services
                             <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
                         </a>
                     </div>
                 </div>
-                <div class="col-span-12 md:col-span-5 md:col-start-8 relative md:-mt-32 z-0">
-                    <div class="relative">
-                        <div class="absolute -inset-6 bg-stone-100 rounded-full blur-3xl"></div>
-                        <div class="relative aspect-[3/4] md:aspect-[3/4] overflow-hidden" style="border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;">
-                            <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="w-full h-full object-cover object-top">
-                        </div>
-                    </div>
-                </div>
             </div>
+        </div>
+        <div class="hidden md:block absolute right-0 top-0 w-1/2 h-full">
+            <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="w-full h-full object-cover rounded-t-[12rem] rounded-bl-[12rem]">
+        </div>
+        <div class="block md:hidden mt-8 px-8">
+            <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="w-full h-[50vh] object-cover rounded-t-[12rem] rounded-bl-[12rem]">
         </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="py-40 md:py-60">
-        <div class="max-w-5xl mx-auto px-6">
+    <section id="about" class="py-32 md:py-48">
+        <div class="max-w-[1400px] mx-auto px-8 md:px-16">
             <div class="max-w-3xl">
-                <p class="font-mono text-xs tracking-[0.3em] uppercase text-stone-400 mb-6">About</p>
-                <h2 class="font-serif text-6xl md:text-7xl font-normal tracking-tight text-stone-900 mb-10 leading-tight">Nancy Monaco</h2>
-                <p class="text-lg font-light text-stone-500 leading-loose max-w-2xl">
+                <p class="font-['Inter'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mb-6 font-light">About</p>
+                <h2 class="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-normal tracking-[-0.02em] text-[#1A1A1A] mb-8">Nancy Monaco</h2>
+                <p class="font-['Inter'] text-base md:text-lg font-light text-[#5C5C5C] leading-[1.8] max-w-2xl">
                     After years in customer service, I saw too many entrepreneurs burn out because they were the single point of failure in their own business. I didn't start Guestly to complete tasks. I started it to help owners build autonomous operations.
                 </p>
             </div>
             <div class="grid md:grid-cols-2 gap-16 mt-24">
                 <div>
                     <ul class="space-y-10">
-                        <li><span class="font-serif text-2xl text-stone-900 block mb-2">Strategic Operations Partner</span><span class="font-light text-stone-500">for entrepreneurs scaling their business</span></li>
-                        <li><span class="font-serif text-2xl text-stone-900 block mb-2">Autonomous Operations</span><span class="font-light text-stone-500">not just task lists that keep you dependent</span></li>
-                        <li><span class="font-serif text-2xl text-stone-900 block mb-2">15+ Hours Saved Weekly</span><span class="font-light text-stone-500">per client, on average</span></li>
+                        <li><span class="font-['Cormorant_Garamond'] text-2xl text-[#1A1A1A] block mb-2">Strategic Operations Partner</span><span class="font-['Inter'] font-light text-[#5C5C5C]">for entrepreneurs scaling their business</span></li>
+                        <li><span class="font-['Cormorant_Garamond'] text-2xl text-[#1A1A1A] block mb-2">Autonomous Operations</span><span class="font-['Inter'] font-light text-[#5C5C5C]">not just task lists that keep you dependent</span></li>
+                        <li><span class="font-['Cormorant_Garamond'] text-2xl text-[#1A1A1A] block mb-2">15+ Hours Saved Weekly</span><span class="font-['Inter'] font-light text-[#5C5C5C]">per client, on average</span></li>
                     </ul>
                 </div>
                 <div>
                     <ul class="space-y-10">
-                        <li><span class="font-serif text-2xl text-stone-900 block mb-2">Client Relationship Expert</span><span class="font-light text-stone-500">white-glove communication and retention focus</span></li>
-                        <li><span class="font-serif text-2xl text-stone-900 block mb-2">System Architecture Specialist</span><span class="font-light text-stone-500">automation and workflow optimization</span></li>
-                        <li><span class="font-serif text-2xl text-stone-900 block mb-2">500+ Businesses Served</span><span class="font-light text-stone-500">and counting</span></li>
+                        <li><span class="font-['Cormorant_Garamond'] text-2xl text-[#1A1A1A] block mb-2">Client Relationship Expert</span><span class="font-['Inter'] font-light text-[#5C5C5C]">white-glove communication and retention focus</span></li>
+                        <li><span class="font-['Cormorant_Garamond'] text-2xl text-[#1A1A1A] block mb-2">System Architecture Specialist</span><span class="font-['Inter'] font-light text-[#5C5C5C]">automation and workflow optimization</span></li>
+                        <li><span class="font-['Cormorant_Garamond'] text-2xl text-[#1A1A1A] block mb-2">500+ Businesses Served</span><span class="font-['Inter'] font-light text-[#5C5C5C]">and counting</span></li>
                     </ul>
                 </div>
             </div>
-            <div class="mt-24 border-l-2 border-stone-200 pl-8">
-                <p class="text-2xl md:text-3xl font-serif italic text-stone-900 leading-relaxed max-w-3xl">
-                    "My success isn't measured by how many hours I work. It's measured by how many hours <span class="text-stone-400">you</span> get back to spend on high-level growth or with your family."
+            <div class="mt-24 border-l-2 border-[#E0DBD5] pl-8">
+                <p class="text-2xl md:text-3xl font-['Cormorant_Garamond'] italic text-[#1A1A1A] leading-relaxed max-w-3xl">
+                    "My success isn't measured by how many hours I work. It's measured by how many hours <span class="text-[#8C7B6B]">you</span> get back to spend on high-level growth or with your family."
                 </p>
-                <p class="font-serif text-xl text-stone-400 mt-6">Nancy Monaco, Founder of Guestly</p>
+                <p class="font-['Cormorant_Garamond'] text-xl text-[#8C7B6B] mt-6">Nancy Monaco, Founder of Guestly</p>
             </div>
         </div>
     </section>
 
-    <!-- Services (Vertical List, No Cards) -->
-    <section id="services" class="py-40 md:py-60 border-t border-stone-200">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-20">
-                <p class="font-mono text-xs tracking-[0.3em] uppercase text-stone-400 mb-6">Services</p>
-                <h2 class="font-serif text-6xl md:text-7xl font-normal tracking-tight text-stone-900 leading-tight">What I Do</h2>
+    <!-- Services -->
+    <section id="services" class="py-32 md:py-48">
+        <div class="max-w-[1400px] mx-auto px-8 md:px-16">
+            <div class="mb-16">
+                <p class="font-['Inter'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mb-6 font-light">Services</p>
+                <h2 class="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-normal tracking-[-0.02em] text-[#1A1A1A]">What I Do</h2>
             </div>
-            <div class="border-t border-stone-200">
-                <div class="border-b border-stone-200 py-12 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-                    <h3 class="text-4xl font-serif text-stone-900">Strategic Planning</h3>
-                    <p class="text-stone-500 max-w-sm font-light leading-relaxed">Calendar management and executive assistance tailored to your business objectives.</p>
+            <div class="border-t border-[#E0DBD5]">
+                <div class="flex flex-col md:flex-row justify-between items-start py-12 border-b border-[#E0DBD5]">
+                    <h3 class="font-['Cormorant_Garamond'] text-4xl text-[#1A1A1A] mb-4 md:mb-0">Strategic Planning</h3>
+                    <p class="text-[#5C5C5C] max-w-md font-['Inter'] font-light">Calendar management and executive assistance tailored to your business objectives.</p>
                 </div>
-                <div class="border-b border-stone-200 py-12 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-                    <h3 class="text-4xl font-serif text-stone-900">Ops &amp; Systems</h3>
-                    <p class="text-stone-500 max-w-sm font-light leading-relaxed">Streamline your backend processes with custom automations and CRM management.</p>
+                <div class="flex flex-col md:flex-row justify-between items-start py-12 border-b border-[#E0DBD5]">
+                    <h3 class="font-['Cormorant_Garamond'] text-4xl text-[#1A1A1A] mb-4 md:mb-0">Ops &amp; Systems</h3>
+                    <p class="text-[#5C5C5C] max-w-md font-['Inter'] font-light">Streamline your backend processes with custom automations and CRM management.</p>
                 </div>
-                <div class="border-b border-stone-200 py-12 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-                    <h3 class="text-4xl font-serif text-stone-900">Customer Success</h3>
-                    <p class="text-stone-500 max-w-sm font-light leading-relaxed">White-glove communication that keeps your clients happy and your retention high.</p>
+                <div class="flex flex-col md:flex-row justify-between items-start py-12 border-b border-[#E0DBD5]">
+                    <h3 class="font-['Cormorant_Garamond'] text-4xl text-[#1A1A1A] mb-4 md:mb-0">Customer Success</h3>
+                    <p class="text-[#5C5C5C] max-w-md font-['Inter'] font-light">White-glove communication that keeps your clients happy and your retention high.</p>
                 </div>
-                <div class="border-b border-stone-200 py-12 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-                    <h3 class="text-4xl font-serif text-stone-900">Inbox Management</h3>
-                    <p class="text-stone-500 max-w-sm font-light leading-relaxed">Full inbox triage, response drafting, and priority flagging so you never miss a critical message.</p>
+                <div class="flex flex-col md:flex-row justify-between items-start py-12 border-b border-[#E0DBD5]">
+                    <h3 class="font-['Cormorant_Garamond'] text-4xl text-[#1A1A1A] mb-4 md:mb-0">Inbox Management</h3>
+                    <p class="text-[#5C5C5C] max-w-md font-['Inter'] font-light">Full inbox triage, response drafting, and priority flagging so you never miss a critical message.</p>
                 </div>
-                <div class="border-b border-stone-200 py-12 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-                    <h3 class="text-4xl font-serif text-stone-900">Research &amp; Reporting</h3>
-                    <p class="text-stone-500 max-w-sm font-light leading-relaxed">Competitive analysis, data-backed recommendations, and portfolio efficiency audits.</p>
+                <div class="flex flex-col md:flex-row justify-between items-start py-12 border-b border-[#E0DBD5]">
+                    <h3 class="font-['Cormorant_Garamond'] text-4xl text-[#1A1A1A] mb-4 md:mb-0">Research &amp; Reporting</h3>
+                    <p class="text-[#5C5C5C] max-w-md font-['Inter'] font-light">Competitive analysis, data-backed recommendations, and portfolio efficiency audits.</p>
                 </div>
-                <div class="py-12 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-                    <h3 class="text-4xl font-serif text-stone-900">Need Something Else?</h3>
+                <div class="flex flex-col md:flex-row justify-between items-start py-12">
+                    <h3 class="font-['Cormorant_Garamond'] text-4xl text-[#1A1A1A] mb-4 md:mb-0">Need Something Else?</h3>
                     <div class="flex items-center gap-4">
-                        <p class="text-stone-500 font-light">I adapt quickly to new tools and processes.</p>
-                        <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I%20have%20a%20custom%20request." target="_blank" class="text-lg font-serif text-stone-900 border-b border-stone-900 pb-0.5 hover:border-stone-400 hover:text-stone-400 transition-colors duration-700 whitespace-nowrap">Ask Me →</a>
+                        <p class="text-[#5C5C5C] font-['Inter'] font-light">I adapt quickly to new tools and processes.</p>
+                        <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I%20have%20a%20custom%20request." target="_blank" class="group inline-flex items-center gap-2 font-['Inter'] text-sm uppercase tracking-[0.2em] text-[#1A1A1A] border-b border-[#1A1A1A] pb-1 hover:border-[#8C7B6B] hover:text-[#8C7B6B] transition-colors duration-500 whitespace-nowrap">
+                            Ask Me <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Overlapping Metrics -->
-    <div class="bg-stone-50 py-32 -mt-20 -mb-20 z-10 relative rounded-t-[4rem] rounded-b-[4rem] mx-4 md:mx-12">
-        <div class="max-w-7xl mx-auto px-6">
+    <!-- Metrics -->
+    <div class="bg-[#F7F4F1] py-32">
+        <div class="max-w-[1400px] mx-auto px-8 md:px-16">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-16 text-center">
-                <div><div class="text-7xl md:text-9xl font-serif text-stone-900 mb-4">500+</div><div class="text-xs uppercase tracking-[0.2em] text-stone-400">Businesses Served</div></div>
-                <div><div class="text-7xl md:text-9xl font-serif text-stone-900 mb-4">15+</div><div class="text-xs uppercase tracking-[0.2em] text-stone-400">Hours Saved Weekly</div></div>
-                <div><div class="text-7xl md:text-9xl font-serif text-stone-900 mb-4">100%</div><div class="text-xs uppercase tracking-[0.2em] text-stone-400">Satisfaction Rate</div></div>
-                <div><div class="text-7xl md:text-9xl font-serif text-stone-900 mb-4">£2.4K</div><div class="text-xs uppercase tracking-[0.2em] text-stone-400">Avg Monthly Saved</div></div>
+                <div><div class="font-['Cormorant_Garamond'] text-7xl md:text-8xl text-[#1A1A1A]">500+</div><div class="font-['Inter'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mt-4 font-light">Businesses Served</div></div>
+                <div><div class="font-['Cormorant_Garamond'] text-7xl md:text-8xl text-[#1A1A1A]">15+</div><div class="font-['Inter'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mt-4 font-light">Hours Saved Weekly</div></div>
+                <div><div class="font-['Cormorant_Garamond'] text-7xl md:text-8xl text-[#1A1A1A]">100%</div><div class="font-['Inter'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mt-4 font-light">Satisfaction Rate</div></div>
+                <div><div class="font-['Cormorant_Garamond'] text-7xl md:text-8xl text-[#1A1A1A]">£2.4K</div><div class="font-['Inter'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mt-4 font-light">Avg Monthly Saved</div></div>
             </div>
         </div>
     </div>
 
-    <!-- Testimonials (Full-Width Quote, No Cards) -->
-    <section id="testimonials" class="py-60 md:py-80">
-        <div class="max-w-7xl mx-auto px-6">
-            <div>
-                <p class="font-mono text-xs tracking-[0.3em] uppercase text-stone-400 mb-8">Testimonials</p>
-                <h2 class="font-serif text-6xl md:text-7xl font-normal tracking-tight text-stone-900 mb-20 leading-tight">The Wall of Love</h2>
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-32 md:py-48">
+        <div class="max-w-[1400px] mx-auto px-8 md:px-16">
+            <div class="mb-16">
+                <p class="font-['Inter'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mb-6 font-light">Testimonials</p>
+                <h2 class="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-normal tracking-[-0.02em] text-[#1A1A1A]">The Wall of Love</h2>
             </div>
-            <div class="text-5xl md:text-7xl font-serif leading-tight text-stone-900 max-w-5xl mx-auto space-y-24">
-                <div>
-                    <p class="italic">"Guestly didn't just take over my emails. They completely redesigned my client onboarding process. I've never felt more organized."</p>
-                    <p class="text-lg font-sans font-light text-stone-400 mt-6 not-italic">Sarah Jenkins, Founder of Bloom Agency</p>
+            <div class="space-y-24">
+                <div class="text-center max-w-4xl mx-auto">
+                    <p class="font-['Cormorant_Garamond'] text-4xl md:text-6xl leading-tight text-[#1A1A1A] italic">"Guestly didn't just take over my emails. They completely redesigned my client onboarding process. I've never felt more organized."</p>
+                    <p class="font-['Inter'] text-xs uppercase tracking-[0.2em] text-[#5C5C5C] mt-8">Sarah Jenkins, Founder of Bloom Agency</p>
                 </div>
-                <div>
-                    <p class="italic">"The ROI was immediate. The level of initiative Nancy's team shows is unlike any other VA service I've tried."</p>
-                    <p class="text-lg font-sans font-light text-stone-400 mt-6 not-italic">David Lowery, Tech Lead at ScaleUp</p>
+                <div class="text-center max-w-4xl mx-auto">
+                    <p class="font-['Cormorant_Garamond'] text-4xl md:text-6xl leading-tight text-[#1A1A1A] italic">"The ROI was immediate. The level of initiative Nancy's team shows is unlike any other VA service I've tried."</p>
+                    <p class="font-['Inter'] text-xs uppercase tracking-[0.2em] text-[#5C5C5C] mt-8">David Lowery, Tech Lead at ScaleUp</p>
                 </div>
-                <div>
-                    <p class="italic">"Highly professional, responsive, and they truly care about my business growth. It's like having a COO."</p>
-                    <p class="text-lg font-sans font-light text-stone-400 mt-6 not-italic">Elena Rodriguez, E-comm Director</p>
+                <div class="text-center max-w-4xl mx-auto">
+                    <p class="font-['Cormorant_Garamond'] text-4xl md:text-6xl leading-tight text-[#1A1A1A] italic">"Highly professional, responsive, and they truly care about my business growth. It's like having a COO."</p>
+                    <p class="font-['Inter'] text-xs uppercase tracking-[0.2em] text-[#5C5C5C] mt-8">Elena Rodriguez, E-comm Director</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-40 md:py-60 border-t border-stone-200">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <p class="font-mono text-xs tracking-[0.3em] uppercase text-stone-400 mb-6">Let's Begin</p>
-            <h2 class="font-serif text-6xl md:text-7xl font-normal tracking-tight text-stone-900 mb-8 leading-tight">Ready to Reclaim Your Time?</h2>
-            <p class="text-lg font-light text-stone-500 leading-loose mb-14 max-w-2xl mx-auto">Join the 500+ entrepreneurs who have scaled their businesses with Guestly as their secret weapon.</p>
-            <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="text-lg font-serif text-stone-900 border-b border-stone-900 pb-1 hover:border-stone-400 hover:text-stone-400 transition-colors duration-700 flex items-center gap-2 justify-center group">
+    <section class="py-32 md:py-48 border-t border-[#E0DBD5]">
+        <div class="max-w-4xl mx-auto px-8 md:px-16 text-center">
+            <p class="font-['Inter'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mb-6 font-light">Let's Begin</p>
+            <h2 class="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-normal tracking-[-0.02em] text-[#1A1A1A] mb-8">Ready to Reclaim Your Time?</h2>
+            <p class="font-['Inter'] text-base md:text-lg font-light text-[#5C5C5C] leading-[1.8] mb-14 max-w-2xl mx-auto">Join the 500+ entrepreneurs who have scaled their businesses with Guestly as their secret weapon.</p>
+            <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group inline-flex items-center gap-3 font-['Inter'] text-sm uppercase tracking-[0.2em] text-[#1A1A1A] border-b border-[#1A1A1A] pb-2 hover:border-[#8C7B6B] hover:text-[#8C7B6B] transition-colors duration-500">
                 Book a Strategy Call
                 <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
             </a>
@@ -208,30 +207,30 @@ sans: ['Inter', 'sans-serif'],
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-40 md:py-60 border-t border-stone-200">
-        <div class="max-w-6xl mx-auto px-6">
+    <section id="contact" class="py-32 md:py-48 border-t border-[#E0DBD5]">
+        <div class="max-w-[1400px] mx-auto px-8 md:px-16">
             <div class="grid lg:grid-cols-2 gap-24">
                 <div>
-                    <p class="font-mono text-xs tracking-[0.3em] uppercase text-stone-400 mb-6">Contact</p>
-                    <h2 class="font-serif text-6xl md:text-7xl font-normal tracking-tight text-stone-900 mb-8 leading-tight">Let's Work Together</h2>
-                    <p class="text-lg font-light text-stone-500 leading-loose mb-16">Ready to reclaim your time? Send me a message or book a discovery call to discuss how I can support your business.</p>
+                    <p class="font-['Inter'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mb-6 font-light">Contact</p>
+                    <h2 class="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-normal tracking-[-0.02em] text-[#1A1A1A] mb-8">Let's Work Together</h2>
+                    <p class="font-['Inter'] text-base md:text-lg font-light text-[#5C5C5C] leading-[1.8] mb-16">Ready to reclaim your time? Send me a message or book a discovery call to discuss how I can support your business.</p>
                     <div class="space-y-8">
                         <a href="https://wa.me/447511664281" target="_blank" class="block">
-                            <p class="font-mono text-xs tracking-[0.3em] uppercase text-stone-400 mb-2">WhatsApp</p>
-                            <p class="font-serif text-2xl text-stone-900">+44 7511 664281</p>
+                            <p class="font-['Inter'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mb-2 font-light">WhatsApp</p>
+                            <p class="font-['Cormorant_Garamond'] text-2xl text-[#1A1A1A]">+44 7511 664281</p>
                         </a>
                         <a href="mailto:hello@nancymonaco.com" class="block">
-                            <p class="font-mono text-xs tracking-[0.3em] uppercase text-stone-400 mb-2">Email</p>
-                            <p class="font-serif text-2xl text-stone-900">hello@nancymonaco.com</p>
+                            <p class="font-['Inter'] text-xs uppercase tracking-[0.3em] text-[#8C7B6B] mb-2 font-light">Email</p>
+                            <p class="font-['Cormorant_Garamond'] text-2xl text-[#1A1A1A]">hello@nancymonaco.com</p>
                         </a>
                     </div>
                 </div>
                 <div>
                     <form onsubmit="event.preventDefault(); window.open('https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!', '_blank');" class="space-y-8">
-                        <div><label class="block font-mono text-xs uppercase tracking-wider text-stone-400 mb-3">Name</label><input type="text" class="w-full px-0 py-3 bg-transparent border-0 border-b border-stone-300 focus:outline-none focus:border-stone-900 transition-colors font-light text-stone-900 text-lg" placeholder="Your name"></div>
-                        <div><label class="block font-mono text-xs uppercase tracking-wider text-stone-400 mb-3">Email</label><input type="email" class="w-full px-0 py-3 bg-transparent border-0 border-b border-stone-300 focus:outline-none focus:border-stone-900 transition-colors font-light text-stone-900 text-lg" placeholder="your@email.com"></div>
-                        <div><label class="block font-mono text-xs uppercase tracking-wider text-stone-400 mb-3">Message</label><textarea rows="4" class="w-full px-0 py-3 bg-transparent border-0 border-b border-stone-300 focus:outline-none focus:border-stone-900 transition-colors font-light text-stone-900 text-lg resize-none" placeholder="How can I help you?"></textarea></div>
-                        <button type="submit" class="text-lg font-serif text-stone-900 border-b border-stone-900 pb-1 hover:border-stone-400 hover:text-stone-400 transition-colors duration-700 flex items-center gap-2 group">
+                        <div><label class="block font-['Inter'] text-xs uppercase tracking-wider text-[#8C7B6B] mb-3 font-light">Name</label><input type="text" class="w-full px-0 py-3 bg-transparent border-0 border-b border-[#E0DBD5] focus:outline-none focus:border-[#1A1A1A] transition-colors font-['Inter'] font-light text-[#1A1A1A] text-lg" placeholder="Your name"></div>
+                        <div><label class="block font-['Inter'] text-xs uppercase tracking-wider text-[#8C7B6B] mb-3 font-light">Email</label><input type="email" class="w-full px-0 py-3 bg-transparent border-0 border-b border-[#E0DBD5] focus:outline-none focus:border-[#1A1A1A] transition-colors font-['Inter'] font-light text-[#1A1A1A] text-lg" placeholder="your@email.com"></div>
+                        <div><label class="block font-['Inter'] text-xs uppercase tracking-wider text-[#8C7B6B] mb-3 font-light">Message</label><textarea rows="4" class="w-full px-0 py-3 bg-transparent border-0 border-b border-[#E0DBD5] focus:outline-none focus:border-[#1A1A1A] transition-colors font-['Inter'] font-light text-[#1A1A1A] text-lg resize-none" placeholder="How can I help you?"></textarea></div>
+                        <button type="submit" class="group inline-flex items-center gap-3 font-['Inter'] text-sm uppercase tracking-[0.2em] text-[#1A1A1A] border-b border-[#1A1A1A] pb-2 hover:border-[#8C7B6B] hover:text-[#8C7B6B] transition-colors duration-500">
                             Send Message
                             <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
                         </button>
@@ -242,22 +241,22 @@ sans: ['Inter', 'sans-serif'],
     </section>
 
     <!-- Footer -->
-    <footer class="py-16 border-t border-stone-200">
-        <div class="max-w-7xl mx-auto px-6">
+    <footer class="py-16 border-t border-[#E0DBD5]">
+        <div class="max-w-[1400px] mx-auto px-8 md:px-16">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex flex-col items-center md:items-start gap-1">
-                    <span class="font-serif text-2xl text-stone-900">Guestly</span>
-                    <p class="font-sans text-sm font-light text-stone-400">Your Remote Business Partner</p>
+                    <span class="font-['Cormorant_Garamond'] text-2xl text-[#1A1A1A]">Guestly</span>
+                    <p class="font-['Inter'] text-sm font-light text-[#5C5C5C]">Your Remote Business Partner</p>
                 </div>
-                <div class="flex gap-10 text-sm font-sans font-medium text-stone-400">
-                    <a href="#about" class="hover:text-stone-900 transition-colors">About</a>
-                    <a href="#services" class="hover:text-stone-900 transition-colors">Services</a>
-                    <a href="#testimonials" class="hover:text-stone-900 transition-colors">Testimonials</a>
-                    <a href="#contact" class="hover:text-stone-900 transition-colors">Contact</a>
+                <div class="flex gap-10 font-['Inter'] text-sm font-light text-[#5C5C5C]">
+                    <a href="#about" class="hover:text-[#1A1A1A] transition-colors">About</a>
+                    <a href="#services" class="hover:text-[#1A1A1A] transition-colors">Services</a>
+                    <a href="#testimonials" class="hover:text-[#1A1A1A] transition-colors">Testimonials</a>
+                    <a href="#contact" class="hover:text-[#1A1A1A] transition-colors">Contact</a>
                 </div>
             </div>
-            <div class="mt-12 pt-8 border-t border-stone-200 text-center">
-                <p class="font-sans text-sm font-light text-stone-400">&copy; 2025 Guestly Services Ltd. All rights reserved.</p>
+            <div class="mt-12 pt-8 border-t border-[#E0DBD5] text-center">
+                <p class="font-['Inter'] text-sm font-light text-[#5C5C5C]">&copy; 2025 Guestly Services Ltd. All rights reserved.</p>
             </div>
         </div>
     </footer>
