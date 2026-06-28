@@ -3,36 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guestly | Silent Partner Executive Services</title>
+<title>Guestly | Your Remote Business Partner</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap');
 body {
 font-family: 'Jost', sans-serif;
-background-color: #fdfcfa;
+background-color: #fcfbf9;
 }
-body::before {
-content: "";
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-pointer-events: none;
-z-index: 9999;
-opacity: 0.02;
-background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+.font-playfair {
+font-family: 'Playfair Display', serif;
 }
-.fade-in {
+.fade-up {
 opacity: 0;
-animation: fadeIn 2s ease-out forwards;
+animation: fadeUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 .delay-100 { animation-delay: 0.2s; }
 .delay-200 { animation-delay: 0.4s; }
 .delay-300 { animation-delay: 0.6s; }
-@keyframes fadeIn {
+@keyframes fadeUp {
 from { opacity: 0; }
 to { opacity: 1; }
 }
@@ -42,11 +33,9 @@ tailwind.config = {
 theme: {
 extend: {
 colors: {
-alabaster: '#fdfcfa',
+alabaster: '#fcfbf9',
 espresso: '#2b2420',
 champagne: '#c5a572',
-mauve: '#e8dee0',
-taupe: '#8c8077',
 },
 fontFamily: {
 playfair: ['Playfair Display', 'serif'],
@@ -56,21 +45,21 @@ jost: ['Jost', 'sans-serif'],
 },
 }
 </script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap">
 </head>
-<body class="font-['Jost'] text-taupe antialiased selection:bg-champagne/20 selection:text-espresso bg-alabaster">
+<body class="font-['Jost'] text-espresso antialiased selection:bg-champagne/20 selection:text-espresso bg-alabaster">
 
     <!-- Sticky Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-alabaster/80 backdrop-blur-md border-b border-[#E6DFDC] transition-all">
         <div class="flex h-20 max-w-7xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
             <a href="#" class="text-xl tracking-tight text-espresso flex items-center gap-3 font-['Jost'] font-light">
-                <div class="w-9 h-9 bg-espresso text-champagne rounded-[1rem] flex items-center justify-center">
+                <div class="w-9 h-9 bg-espresso text-champagne rounded-full flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7L12 12L22 7L12 2Z"/><path d="M2 17L12 22L22 17"/><path d="M2 12L12 17L22 12"/></svg>
                 </div>
                 <span class="text-xl font-light uppercase tracking-[0.2em]">Guestly</span>
             </a>
-            <div class="hidden md:flex items-center gap-12 text-sm font-['Jost'] font-light tracking-[0.05em] text-taupe">
+            <div class="hidden md:flex items-center gap-12 text-sm font-['Jost'] font-light tracking-[0.05em] text-stone-500">
                 <a href="#about" class="hover:text-espresso transition-colors">About</a>
                 <a href="#services" class="hover:text-espresso transition-colors">Services</a>
                 <a href="#testimonials" class="hover:text-espresso transition-colors">Testimonials</a>
@@ -85,33 +74,32 @@ jost: ['Jost', 'sans-serif'],
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-44 pb-40 md:pt-60 md:pb-56 overflow-hidden">
+    <section class="relative pt-44 pb-40 md:pt-60 md:pb-56 overflow-hidden border-b border-[#E6DFDC]">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid lg:grid-cols-12 gap-16 items-center">
-                <div class="fade-in order-2 lg:order-1 lg:col-span-7">
-                    <p class="font-['Jost'] text-xs uppercase tracking-[0.35em] text-champagne font-light mb-10">Executive & Confidential EA Services</p>
-                    <h1 class="font-['Playfair_Display'] text-[4.5rem] md:text-[7rem] leading-[0.95] font-normal tracking-tight text-espresso mb-10">
-                        Your time is your only<br>
-                        <span class="italic text-champagne">non-renewable asset</span>
+                <div class="fade-up order-2 lg:order-1 lg:col-span-7">
+                    <p class="font-['Jost'] text-xs uppercase tracking-[0.4em] text-champagne font-light mb-10">Now Accepting New Clients</p>
+                    <h1 class="font-['Playfair_Display'] text-6xl md:text-8xl font-normal leading-[0.95] tracking-tight text-espresso mb-10">
+                        Stop Working 60-Hour Weeks<br> 
+                        <span class="italic text-champagne">While Your Business Suffers</span>
                     </h1>
-                    <p class="font-['Jost'] text-lg font-light text-taupe leading-loose mb-12 max-w-lg">
-                        You didn't build your company to spend 15 hours a week drowning in inbox triage, scheduling, and operational fires. I step in as your silent partner&mdash;protecting your time, executing your vision, and giving you your life back.
+                    <p class="font-['Jost'] text-lg font-light text-stone-500 leading-loose mb-12 max-w-lg">
+                        Finally, a virtual assistant who actually understands your business. Get 15+ hours back every week without hiring full-time staff.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-10 items-center">
-                        <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group font-['Jost'] text-sm uppercase tracking-[0.25em] text-espresso border-b border-espresso pb-1 hover:text-champagne hover:border-champagne transition-colors duration-700 flex items-center gap-2">
-                            Book a Confidential Call
-                            <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
+                    <div class="flex flex-col sm:flex-row gap-6 items-center">
+                        <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="bg-espresso text-alabaster rounded-full px-10 py-5 font-['Jost'] text-sm uppercase tracking-[0.2em] hover:bg-champagne transition-colors duration-700 font-medium">
+                            Hire Me
                         </a>
-                        <a href="#about" class="group font-['Jost'] text-sm uppercase tracking-[0.25em] text-taupe border-b border-taupe pb-1 hover:text-champagne hover:border-champagne transition-colors duration-700 flex items-center gap-2">
-                            Discover My Approach
+                        <a href="#services" class="text-espresso border-b border-espresso pb-1 hover:text-champagne hover:border-champagne transition-colors duration-700 font-['Jost'] text-sm uppercase tracking-[0.2em] font-medium flex items-center gap-2">
+                            View Services
                             <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
                         </a>
                     </div>
                 </div>
-                <div class="fade-in delay-100 order-1 lg:order-2 lg:col-span-5 relative">
+                <div class="fade-up delay-100 order-1 lg:order-2 lg:col-span-5 relative">
                     <div class="relative">
-                        <div class="absolute -inset-10 bg-gradient-to-br from-champagne/20 via-mauve/10 to-transparent rounded-[48px] blur-3xl"></div>
-                        <div class="relative aspect-[3/4] md:aspect-[3/4] overflow-hidden rounded-t-[150px] rounded-bl-[150px] rounded-br-[150px] border-[10px] border-alabaster" style="box-shadow: 0 40px 100px -30px rgba(43,36,32,0.15);">
+                        <div class="absolute -inset-10 bg-gradient-to-br from-champagne/20 via-stone-100/10 to-transparent rounded-[48px] blur-3xl"></div>
+                        <div class="relative aspect-[3/4] md:aspect-[3/4] overflow-hidden rounded-t-[150px] rounded-b-[20px] border-[8px] border-alabaster" style="box-shadow: 0 40px 100px -20px rgba(43,36,32,0.15);">
                             <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="w-full h-full object-cover object-top">
                         </div>
                     </div>
@@ -120,166 +108,149 @@ jost: ['Jost', 'sans-serif'],
         </div>
     </section>
 
-    <!-- Transferable Experience Section -->
-    <section id="about" class="py-40 md:py-56 bg-alabaster border-b border-[#E6DFDC]">
+    <!-- Mission/About Section -->
+    <section id="about" class="py-40 md:py-56 border-b border-[#E6DFDC]">
         <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-24 fade-in">
-                <p class="font-['Jost'] text-xs uppercase tracking-[0.35em] text-champagne font-light mb-6">01 &mdash; Expertise</p>
-                <h2 class="font-['Playfair_Display'] text-5xl md:text-6xl font-normal tracking-tight text-espresso mb-8">Operations Expertise. <span class="italic text-champagne">Executive Focus.</span></h2>
-                <p class="font-['Jost'] text-lg font-light text-taupe leading-loose max-w-3xl mx-auto">
-                    I didn't start Guestly to just manage tasks. I started it to help owners build autonomous operations. With over 7 years managing complex logistics, communications, and high-stakes environments, I bring the rigor of a corporate Chief of Staff to your daily operations.
+            <div class="text-center mb-24 fade-up">
+                <p class="font-['Jost'] text-xs uppercase tracking-[0.4em] text-champagne font-light mb-6">About</p>
+                <h2 class="font-['Playfair_Display'] text-5xl md:text-6xl font-normal tracking-tight text-espresso mb-8">Meet Nancy Monaco</h2>
+                <p class="font-['Jost'] text-lg font-light text-stone-500 leading-loose max-w-3xl mx-auto">
+                    After years in customer service, I saw too many entrepreneurs burn out because they were the single point of failure in their own business. I didn't start <strong class="text-espresso font-medium">Guestly</strong> to complete tasks. I started it to help owners build autonomous operations.
                 </p>
             </div>
-            <div class="grid md:grid-cols-2 gap-8 fade-in delay-100">
-                <div class="bg-mauve/30 p-12 rounded-[2rem] transition-all duration-700" style="box-shadow: none;">
+            <div class="grid md:grid-cols-2 gap-8 fade-up delay-100">
+                <div class="bg-white p-12 rounded-[2rem] border-0 shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] hover:shadow-[0_40px_80px_-20px_rgba(193,154,107,0.15)] transition-all duration-700 ease-out">
                     <ul class="space-y-8">
-                        <li class="flex items-start gap-5"><div class="w-10 h-10 bg-alabaster/80 rounded-[1rem] flex items-center justify-center flex-shrink-0 transition-colors duration-500 hover:text-champagne"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-espresso"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg></div><div><span class="font-['Playfair_Display'] text-xl text-espresso">7+ Years Operations Experience</span><p class="font-['Jost'] text-sm font-light text-taupe mt-1 leading-relaxed">Managing complex logistics, schedules, and multi-stakeholder environments</p></div></li>
-                        <li class="flex items-start gap-5"><div class="w-10 h-10 bg-alabaster/80 rounded-[1rem] flex items-center justify-center flex-shrink-0 transition-colors duration-500 hover:text-champagne"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-espresso"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg></div><div><span class="font-['Playfair_Display'] text-xl text-espresso">Corporate Chief of Staff Rigor</span><p class="font-['Jost'] text-sm font-light text-taupe mt-1 leading-relaxed">Systems, accountability, and proactive execution at the executive level</p></div></li>
-                        <li class="flex items-start gap-5"><div class="w-10 h-10 bg-alabaster/80 rounded-[1rem] flex items-center justify-center flex-shrink-0 transition-colors duration-500 hover:text-champagne"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-espresso"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div><div><span class="font-['Playfair_Display'] text-xl text-espresso">Autonomous Operations Builder</span><p class="font-['Jost'] text-sm font-light text-taupe mt-1 leading-relaxed">I build systems so your business runs without you being the bottleneck</p></div></li>
+                        <li class="flex items-start gap-5"><div class="w-10 h-10 bg-champagne/10 rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-champagne"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg></div><div><span class="font-['Playfair_Display'] text-xl text-espresso">Strategic Operations Partner</span><p class="font-['Jost'] text-sm font-light text-stone-500 mt-1 leading-relaxed">for entrepreneurs scaling their business</p></div></li>
+                        <li class="flex items-start gap-5"><div class="w-10 h-10 bg-champagne/10 rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-champagne"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg></div><div><span class="font-['Playfair_Display'] text-xl text-espresso">Autonomous Operations</span><p class="font-['Jost'] text-sm font-light text-stone-500 mt-1 leading-relaxed">not just task lists that keep you dependent</p></div></li>
+                        <li class="flex items-start gap-5"><div class="w-10 h-10 bg-champagne/10 rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-champagne"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div><div><span class="font-['Playfair_Display'] text-xl text-espresso">15+ Hours Saved Weekly</span><p class="font-['Jost'] text-sm font-light text-stone-500 mt-1 leading-relaxed">per client, on average</p></div></li>
                     </ul>
                 </div>
-                <div class="bg-mauve/30 p-12 rounded-[2rem] transition-all duration-700" style="box-shadow: none;">
+                <div class="bg-white p-12 rounded-[2rem] border-0 shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] hover:shadow-[0_40px_80px_-20px_rgba(193,154,107,0.15)] transition-all duration-700 ease-out">
                     <ul class="space-y-8">
-                        <li class="flex items-start gap-5"><div class="w-10 h-10 bg-alabaster/80 rounded-[1rem] flex items-center justify-center flex-shrink-0 transition-colors duration-500 hover:text-champagne"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-espresso"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg></div><div><span class="font-['Playfair_Display'] text-xl text-espresso">Executive Communication</span><p class="font-['Jost'] text-sm font-light text-taupe mt-1 leading-relaxed">Inbox triage, stakeholder management, and ghostwriting at the C-suite level</p></div></li>
-                        <li class="flex items-start gap-5"><div class="w-10 h-10 bg-alabaster/80 rounded-[1rem] flex items-center justify-center flex-shrink-0 transition-colors duration-500 hover:text-champagne"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-espresso"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg></div><div><span class="font-['Playfair_Display'] text-xl text-espresso">Tech Stack Integration</span><p class="font-['Jost'] text-sm font-light text-taupe mt-1 leading-relaxed">Asana, Notion, Trello, Google Workspace&mdash;I plug in with zero friction</p></div></li>
-                        <li class="flex items-start gap-5"><div class="w-10 h-10 bg-alabaster/80 rounded-[1rem] flex items-center justify-center flex-shrink-0 transition-colors duration-500 hover:text-champagne"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-espresso"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><div><span class="font-['Playfair_Display'] text-xl text-espresso">Absolute Discretion</span><p class="font-['Jost'] text-sm font-light text-taupe mt-1 leading-relaxed">NDA-ready, confidential, and trustworthy from day one</p></div></li>
+                        <li class="flex items-start gap-5"><div class="w-10 h-10 bg-champagne/10 rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-champagne"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg></div><div><span class="font-['Playfair_Display'] text-xl text-espresso">Client Relationship Expert</span><p class="font-['Jost'] text-sm font-light text-stone-500 mt-1 leading-relaxed">white-glove communication and retention focus</p></div></li>
+                        <li class="flex items-start gap-5"><div class="w-10 h-10 bg-champagne/10 rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-champagne"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg></div><div><span class="font-['Playfair_Display'] text-xl text-espresso">System Architecture Specialist</span><p class="font-['Jost'] text-sm font-light text-stone-500 mt-1 leading-relaxed">automation and workflow optimization</p></div></li>
+                        <li class="flex items-start gap-5"><div class="w-10 h-10 bg-champagne/10 rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-champagne"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><div><span class="font-['Playfair_Display'] text-xl text-espresso">500+ Businesses Served</span><p class="font-['Jost'] text-sm font-light text-stone-500 mt-1 leading-relaxed">and counting</p></div></li>
                     </ul>
                 </div>
             </div>
-            <div class="mt-16 p-12 bg-mauve/30 rounded-[2rem] border-l-[6px] border-champagne fade-in delay-200" style="box-shadow: none;">
+            <div class="mt-16 p-12 bg-white rounded-[2rem] border-0 shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] fade-up delay-200 border-l-[6px] border-champagne">
                 <p class="text-xl md:text-2xl font-['Playfair_Display'] italic text-espresso leading-relaxed">
-                    "My Promise: Absolute discretion, proactive problem-solving, and a seamlessly managed back-end. You focus on the vision; I handle the execution."
+                    "My success isn't measured by how many hours I work. It's measured by how many hours <span class="text-champagne">you</span> get back to spend on high-level growth or with your family."
                 </p>
-                <p class="font-['Playfair_Display'] text-3xl text-champagne mt-6 italic">Nancy Monaco</p>
+                <p class="font-['Playfair_Display'] text-3xl text-champagne mt-6 italic">Nancy Monaco, Founder of Guestly</p>
             </div>
         </div>
     </section>
 
-    <!-- Core Pillars Section -->
-    <section id="services" class="py-40 md:py-56 bg-alabaster border-b border-[#E6DFDC]">
+    <!-- Services Section -->
+    <section id="services" class="py-40 md:py-56 border-b border-[#E6DFDC]">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-24 fade-in">
-                <p class="font-['Jost'] text-xs uppercase tracking-[0.35em] text-champagne font-light mb-6">02 &mdash; Core Pillars</p>
-                <h2 class="font-['Playfair_Display'] text-5xl md:text-6xl font-normal tracking-tight text-espresso mb-6">How I Serve You</h2>
-                <p class="font-['Jost'] text-lg font-light text-taupe leading-loose max-w-2xl mx-auto">Three pillars of executive-grade support. No task lists&mdash;just a fully managed operational backbone.</p>
+            <div class="text-center mb-24 fade-up">
+                <p class="font-['Jost'] text-xs uppercase tracking-[0.4em] text-champagne font-light mb-6">What We Do</p>
+                <h2 class="font-['Playfair_Display'] text-5xl md:text-6xl font-normal tracking-tight text-espresso mb-6">Core Services</h2>
+                <p class="font-['Jost'] text-lg font-light text-stone-500 leading-loose max-w-2xl mx-auto">Comprehensive support designed to streamline your business and give you back your time.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-mauve/30 p-12 rounded-[2rem] transition-all duration-700 fade-in" style="box-shadow: none;">
-                    <div class="w-14 h-14 bg-alabaster/80 rounded-[1rem] flex items-center justify-center text-espresso mb-8 transition-colors duration-500 hover:text-champagne"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg></div>
-                    <p class="font-['Jost'] text-xs uppercase tracking-[0.25em] text-champagne font-light mb-2">Pillar 01</p>
-                    <h3 class="font-['Playfair_Display'] text-2xl text-espresso mb-4">Strategic Operations</h3>
-                    <p class="font-['Jost'] font-light text-taupe leading-relaxed">I don't just manage calendars. I build the systems that run your business without you. From Asana to Notion, I create your operational backbone.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-12 rounded-[2rem] border-0 shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] hover:shadow-[0_40px_80px_-20px_rgba(193,154,107,0.15)] transition-all duration-700 ease-out fade-up">
+                    <div class="w-14 h-14 bg-champagne/10 rounded-full flex items-center justify-center text-champagne mb-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg></div>
+                    <h3 class="font-['Playfair_Display'] text-2xl text-espresso mb-4">Strategic Planning</h3>
+                    <p class="font-['Jost'] font-light text-stone-500 leading-relaxed">Calendar management and executive assistance tailored to your business objectives.</p>
                 </div>
-                <div class="bg-mauve/30 p-12 rounded-[2rem] transition-all duration-700 fade-in delay-100" style="box-shadow: none;">
-                    <div class="w-14 h-14 bg-alabaster/80 rounded-[1rem] flex items-center justify-center text-espresso mb-8 transition-colors duration-500 hover:text-champagne"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg></div>
-                    <p class="font-['Jost'] text-xs uppercase tracking-[0.25em] text-champagne font-light mb-2">Pillar 02</p>
-                    <h3 class="font-['Playfair_Display'] text-2xl text-espresso mb-4">Executive Communication</h3>
-                    <p class="font-['Jost'] font-light text-taupe leading-relaxed">Inbox triage, stakeholder management, and ghostwriting that sounds exactly like you. I ensure the right messages get answered while filtering out the noise.</p>
+                <div class="bg-white p-12 rounded-[2rem] border-0 shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] hover:shadow-[0_40px_80px_-20px_rgba(193,154,107,0.15)] transition-all duration-700 ease-out fade-up delay-100">
+                    <div class="w-14 h-14 bg-champagne/10 rounded-full flex items-center justify-center text-champagne mb-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M9 5v4"></path><path d="M15 5v4"></path><path d="M3 13h18"></path><path d="M5 13v6h14v-6"></path></svg></div>
+                    <h3 class="font-['Playfair_Display'] text-2xl text-espresso mb-4">Ops &amp; Systems</h3>
+                    <p class="font-['Jost'] font-light text-stone-500 leading-relaxed">Streamline your backend processes with custom automations and CRM management.</p>
                 </div>
-                <div class="bg-mauve/30 p-12 rounded-[2rem] transition-all duration-700 fade-in delay-200" style="box-shadow: none;">
-                    <div class="w-14 h-14 bg-alabaster/80 rounded-[1rem] flex items-center justify-center text-espresso mb-8 transition-colors duration-500 hover:text-champagne"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
-                    <p class="font-['Jost'] text-xs uppercase tracking-[0.25em] text-champagne font-light mb-2">Pillar 03</p>
-                    <h3 class="font-['Playfair_Display'] text-2xl text-espresso mb-4">Project & Team Execution</h3>
-                    <p class="font-['Jost'] font-light text-taupe leading-relaxed">I act as the central hub for your team, holding vendors and internal staff accountable to deadlines so you don't have to be the bottleneck.</p>
+                <div class="bg-white p-12 rounded-[2rem] border-0 shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] hover:shadow-[0_40px_80px_-20px_rgba(193,154,107,0.15)] transition-all duration-700 ease-out fade-up delay-200">
+                    <div class="w-14 h-14 bg-champagne/10 rounded-full flex items-center justify-center text-champagne mb-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                    <h3 class="font-['Playfair_Display'] text-2xl text-espresso mb-4">Customer Success</h3>
+                    <p class="font-['Jost'] font-light text-stone-500 leading-relaxed">White-glove communication that keeps your clients happy and your retention high.</p>
+                </div>
+                <div class="bg-white p-12 rounded-[2rem] border-0 shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] hover:shadow-[0_40px_80px_-20px_rgba(193,154,107,0.15)] transition-all duration-700 ease-out fade-up">
+                    <div class="w-14 h-14 bg-champagne/10 rounded-full flex items-center justify-center text-champagne mb-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg></div>
+                    <h3 class="font-['Playfair_Display'] text-2xl text-espresso mb-4">Inbox Management</h3>
+                    <p class="font-['Jost'] font-light text-stone-500 leading-relaxed">Full inbox triage, response drafting, and priority flagging so you never miss a critical message.</p>
+                </div>
+                <div class="bg-white p-12 rounded-[2rem] border-0 shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] hover:shadow-[0_40px_80px_-20px_rgba(193,154,107,0.15)] transition-all duration-700 ease-out fade-up delay-100">
+                    <div class="w-14 h-14 bg-champagne/10 rounded-full flex items-center justify-center text-champagne mb-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
+                    <h3 class="font-['Playfair_Display'] text-2xl text-espresso mb-4">Research &amp; Reporting</h3>
+                    <p class="font-['Jost'] font-light text-stone-500 leading-relaxed">Competitive analysis, data-backed recommendations, and portfolio efficiency audits.</p>
+                </div>
+                <div class="bg-espresso p-12 rounded-[2rem] flex flex-col items-center justify-center text-center fade-up delay-200">
+                    <h3 class="font-['Playfair_Display'] text-2xl text-alabaster mb-4">Need Something Else?</h3>
+                    <p class="font-['Jost'] text-sm font-light text-stone-400 mb-10">I adapt quickly to new tools and processes.</p>
+                    <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I%20have%20a%20custom%20request." target="_blank" class="font-['Jost'] text-xs uppercase tracking-[0.25em] text-champagne border-b border-champagne pb-1 hover:text-alabaster hover:border-alabaster transition-colors duration-700">Ask Me About It</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Code of Trust Section -->
-    <div class="py-32 md:py-40 bg-alabaster border-b border-[#E6DFDC]">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-20 fade-in">
-                <p class="font-['Jost'] text-xs uppercase tracking-[0.35em] text-champagne font-light mb-6">03 &mdash; Code of Trust</p>
-                <h2 class="font-['Playfair_Display'] text-5xl md:text-6xl font-normal tracking-tight text-espresso mb-6">How I Partner With You</h2>
-                <p class="font-['Jost'] text-lg font-light text-taupe leading-loose max-w-2xl mx-auto">Three principles that define every engagement. No exceptions.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="fade-in"><div class="font-['Playfair_Display'] text-5xl text-champagne mb-6">01.</div><h3 class="font-['Playfair_Display'] text-xl text-espresso mb-4">Absolute Confidentiality</h3><p class="font-['Jost'] font-light text-taupe leading-relaxed max-w-sm mx-auto">Your data, your communications, and your strategy are protected with strict NDA-ready discretion.</p></div>
-                <div class="fade-in delay-100"><div class="font-['Playfair_Display'] text-5xl text-champagne mb-6">02.</div><h3 class="font-['Playfair_Display'] text-xl text-espresso mb-4">Proactive Execution</h3><p class="font-['Jost'] font-light text-taupe leading-relaxed max-w-sm mx-auto">I don't wait for instructions. I anticipate bottlenecks and present solutions before they become emergencies.</p></div>
-                <div class="fade-in delay-200"><div class="font-['Playfair_Display'] text-5xl text-champagne mb-6">03.</div><h3 class="font-['Playfair_Display'] text-xl text-espresso mb-4">Seamless Integration</h3><p class="font-['Jost'] font-light text-taupe leading-relaxed max-w-sm mx-auto">I plug directly into your existing tech stack with zero friction or hand-holding required.</p></div>
+    <!-- Metrics Bar -->
+    <div class="py-24 md:py-32 border-b border-[#E6DFDC]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-16 text-center">
+                <div class="fade-up"><div class="font-['Playfair_Display'] text-6xl md:text-7xl text-espresso mb-4">500+</div><div class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-stone-500 font-light">Businesses Served</div></div>
+                <div class="fade-up delay-100"><div class="font-['Playfair_Display'] text-6xl md:text-7xl text-espresso mb-4">15+</div><div class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-stone-500 font-light">Hours Saved Weekly</div></div>
+                <div class="fade-up delay-200"><div class="font-['Playfair_Display'] text-6xl md:text-7xl text-espresso mb-4">100%</div><div class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-stone-500 font-light">Satisfaction Rate</div></div>
+                <div class="fade-up delay-300"><div class="font-['Playfair_Display'] text-6xl md:text-7xl text-espresso mb-4">&pound;2.4K</div><div class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-stone-500 font-light">Avg Monthly Saved</div></div>
             </div>
         </div>
     </div>
 
-    <!-- How We Work Together Section -->
-    <section class="py-40 md:py-56 bg-alabaster border-b border-[#E6DFDC]">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-24 fade-in">
-                <p class="font-['Jost'] text-xs uppercase tracking-[0.35em] text-champagne font-light mb-6">04 &mdash; The Process</p>
-                <h2 class="font-['Playfair_Display'] text-5xl md:text-6xl font-normal tracking-tight text-espresso mb-6">How We Work Together</h2>
-                <p class="font-['Jost'] text-lg font-light text-taupe leading-loose max-w-2xl mx-auto">A professional onboarding flow designed for zero friction and immediate impact.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-mauve/30 p-12 rounded-[2rem] transition-all duration-700 fade-in text-center" style="box-shadow: none;">
-                    <div class="font-['Playfair_Display'] text-5xl text-champagne mb-6">01.</div>
-                    <h3 class="font-['Playfair_Display'] text-2xl text-espresso mb-4">The Discovery</h3>
-                    <p class="font-['Jost'] font-light text-taupe leading-relaxed">A confidential 30-minute call to map your exact bottlenecks, priorities, and operational gaps.</p>
-                </div>
-                <div class="bg-mauve/30 p-12 rounded-[2rem] transition-all duration-700 fade-in delay-100 text-center" style="box-shadow: none;">
-                    <div class="font-['Playfair_Display'] text-5xl text-champagne mb-6">02.</div>
-                    <h3 class="font-['Playfair_Display'] text-2xl text-espresso mb-4">The Integration</h3>
-                    <p class="font-['Jost'] font-light text-taupe leading-relaxed">I seamlessly plug into your existing tech stack and begin auditing your workflow for immediate wins.</p>
-                </div>
-                <div class="bg-mauve/30 p-12 rounded-[2rem] transition-all duration-700 fade-in delay-200 text-center" style="box-shadow: none;">
-                    <div class="font-['Playfair_Display'] text-5xl text-champagne mb-6">03.</div>
-                    <h3 class="font-['Playfair_Display'] text-2xl text-espresso mb-4">The Execution</h3>
-                    <p class="font-['Jost'] font-light text-taupe leading-relaxed">Daily autonomous management, weekly executive briefings, and 100% reliable support.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-40 md:py-56 bg-alabaster border-b border-[#E6DFDC]">
+    <section id="testimonials" class="py-40 md:py-56 border-b border-[#E6DFDC]">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-24 fade-in">
-                <p class="font-['Jost'] text-xs uppercase tracking-[0.35em] text-champagne font-light mb-6">05 &mdash; Testimonials</p>
-                <h2 class="font-['Playfair_Display'] text-5xl md:text-6xl font-normal tracking-tight text-espresso mb-6">What People Say</h2>
-                <p class="font-['Jost'] text-lg font-light text-taupe leading-loose max-w-2xl mx-auto">Real words from real people I've partnered with.</p>
+            <div class="text-center mb-24 fade-up">
+                <p class="font-['Jost'] text-xs uppercase tracking-[0.4em] text-champagne font-light mb-6">Social Proof</p>
+                <h2 class="font-['Playfair_Display'] text-5xl md:text-6xl font-normal tracking-tight text-espresso mb-6">The Wall of Love</h2>
+                <p class="font-['Jost'] text-lg font-light text-stone-500 leading-loose max-w-2xl mx-auto">Real results from business owners who got their time back.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-mauve/30 p-10 rounded-[2rem] transition-all duration-700 fade-in relative overflow-hidden" style="box-shadow: none;">
-                    <svg class="absolute -top-6 -left-2 w-24 h-24 text-espresso/[0.04] select-none pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-[2rem] border-0 shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] hover:shadow-[0_40px_80px_-20px_rgba(193,154,107,0.15)] transition-all duration-700 ease-out fade-up relative overflow-hidden">
+                    <svg class="absolute -top-6 -left-2 w-24 h-24 text-stone-100 select-none pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
                     <div class="flex items-center gap-4 mb-6 relative z-10">
-                        <img class="w-14 h-14 object-cover rounded-t-[50px] rounded-b-[50px] ring-1 ring-champagne/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNp8FI54sUXQxY2XfMF9bSLEZXmXgWe6tNf6AfrxSNIcTb0Xj2_p05MTvPGhhZA6uuZgtYI-1Ww9inMfYYbLgurGi8BskJkeosdZbRrcmM5dwFJrsyD8T1ju2BbqyOUG5uBFT8KlUnqe_b6d13SDa362J0zoIb-QxKMqNLaJhm5sUYB4D8D9qIcwWEwoxYcZ9ZA0yGfXaoSgpMR6d64svLBA4JhTngyrNcbLB6LYQQ29xJkSbVY-0dRCsgBw8vWPO4XuWbVLLg7c45" alt="Sarah J.">
-                        <div><h4 class="font-['Playfair_Display'] text-xl text-espresso">Sarah Jenkins</h4><p class="font-['Jost'] text-sm font-light text-taupe">Founder, Bloom Agency</p></div>
+                        <img class="w-14 h-14 object-cover rounded-full ring-1 ring-champagne/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNp8FI54sUXQxY2XfMF9bSLEZXmXgWe6tNf6AfrxSNIcTb0Xj2_p05MTvPGhhZA6uuZgtYI-1Ww9inMfYYbLgurGi8BskJkeosdZbRrcmM5dwFJrsyD8T1ju2BbqyOUG5uBFT8KlUnqe_b6d13SDa362J0zoIb-QxKMqNLaJhm5sUYB4D8D9qIcwWEwoxYcZ9ZA0yGfXaoSgpMR6d64svLBA4JhTngyrNcbLB6LYQQ29xJkSbVY-0dRCsgBw8vWPO4XuWbVLLg7c45" alt="Sarah J.">
+                        <div><h4 class="font-['Playfair_Display'] text-xl text-espresso">Sarah Jenkins</h4><p class="font-['Jost'] text-sm font-light text-stone-500">Founder, Bloom Agency</p></div>
                     </div>
-                    <p class="font-['Jost'] font-light text-taupe mb-6 leading-relaxed italic relative z-10">"Guestly didn't just take over my emails. They completely redesigned my client onboarding process. I've never felt more organized."</p>
-                    <span class="inline-block px-4 py-1.5 bg-alabaster/80 text-champagne text-xs font-['Jost'] uppercase tracking-wider rounded-full relative z-10">Saved Monthly</span>
+                    <p class="font-['Jost'] font-light text-stone-500 mb-6 leading-relaxed italic relative z-10">"Guestly didn't just take over my emails. They completely redesigned my client onboarding process. I've never felt more organized."</p>
+                    <span class="inline-block px-4 py-1.5 bg-champagne/10 text-champagne text-xs font-['Jost'] uppercase tracking-wider rounded-full relative z-10">&pound;2.4k Saved Monthly</span>
                 </div>
-                <div class="bg-mauve/30 p-10 rounded-[2rem] transition-all duration-700 fade-in delay-100 relative overflow-hidden" style="box-shadow: none;">
-                    <svg class="absolute -top-6 -left-2 w-24 h-24 text-espresso/[0.04] select-none pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+                <div class="bg-white p-10 rounded-[2rem] border-0 shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] hover:shadow-[0_40px_80px_-20px_rgba(193,154,107,0.15)] transition-all duration-700 ease-out fade-up delay-100 relative overflow-hidden">
+                    <svg class="absolute -top-6 -left-2 w-24 h-24 text-stone-100 select-none pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
                     <div class="flex items-center gap-4 mb-6 relative z-10">
-                        <img class="w-14 h-14 object-cover rounded-t-[50px] rounded-b-[50px] ring-1 ring-champagne/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCORI6i9_-KGmMtDJ-f_X2ftKApZjVMGaG0JZI_MovQO7X9XH-jKXcbTai2n6JsYzgS3stjrLgteqnCYE3MvIp9KvjJnZUijcMxBlWPWuSos-NjdbKIzVkzNL3WLf1TRMnvcgARt2v4NZLvLebTuriuOOC2jyy5ottOvyC6iPIp_UqCzkIyug4w4i_Z64Fa6uvIQgs9UvY8cRqtoS0T9b0385owv_2Fnhm-gv2q6gyDc2QQd_cK7qBJ5HLLY3lnAgdIA9zz0xpJrFLy" alt="David L.">
-                        <div><h4 class="font-['Playfair_Display'] text-xl text-espresso">David Lowery</h4><p class="font-['Jost'] text-sm font-light text-taupe">Tech Lead, ScaleUp</p></div>
+                        <img class="w-14 h-14 object-cover rounded-full ring-1 ring-champagne/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCORI6i9_-KGmMtDJ-f_X2ftKApZjVMGaG0JZI_MovQO7X9XH-jKXcbTai2n6JsYzgS3stjrLgteqnCYE3MvIp9KvjJnZUijcMxBlWPWuSos-NjdbKIzVkzNL3WLf1TRMnvcgARt2v4NZLvLebTuriuOOC2jyy5ottOvyC6iPIp_UqCzkIyug4w4i_Z64Fa6uvIQgs9UvY8cRqtoS0T9b0385owv_2Fnhm-gv2q6gyDc2QQd_cK7qBJ5HLLY3lnAgdIA9zz0xpJrFLy" alt="David L.">
+                        <div><h4 class="font-['Playfair_Display'] text-xl text-espresso">David Lowery</h4><p class="font-['Jost'] text-sm font-light text-stone-500">Tech Lead, ScaleUp</p></div>
                     </div>
-                    <p class="font-['Jost'] font-light text-taupe mb-6 leading-relaxed italic relative z-10">"The ROI was immediate. The level of initiative Nancy's team shows is unlike any other VA service I've tried."</p>
-                    <span class="inline-block px-4 py-1.5 bg-alabaster/80 text-champagne text-xs font-['Jost'] uppercase tracking-wider rounded-full relative z-10">20h Recovered Weekly</span>
+                    <p class="font-['Jost'] font-light text-stone-500 mb-6 leading-relaxed italic relative z-10">"The ROI was immediate. The level of initiative Nancy's team shows is unlike any other VA service I've tried."</p>
+                    <span class="inline-block px-4 py-1.5 bg-champagne/10 text-champagne text-xs font-['Jost'] uppercase tracking-wider rounded-full relative z-10">20h Recovered Weekly</span>
                 </div>
-                <div class="bg-mauve/30 p-10 rounded-[2rem] transition-all duration-700 fade-in delay-200 relative overflow-hidden" style="box-shadow: none;">
-                    <svg class="absolute -top-6 -left-2 w-24 h-24 text-espresso/[0.04] select-none pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+                <div class="bg-white p-10 rounded-[2rem] border-0 shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] hover:shadow-[0_40px_80px_-20px_rgba(193,154,107,0.15)] transition-all duration-700 ease-out fade-up delay-200 relative overflow-hidden">
+                    <svg class="absolute -top-6 -left-2 w-24 h-24 text-stone-100 select-none pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
                     <div class="flex items-center gap-4 mb-6 relative z-10">
-                        <img class="w-14 h-14 object-cover rounded-t-[50px] rounded-b-[50px] ring-1 ring-champagne/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzAdgSj8DzG0-jZxz4F3AUoiJz8nkuWlcG9yO8ztm537UKcXTZa4ge8xkN_LDKw72ZQBgEh2eawRpnjAYenXRGxRalqbMwyJCTwFPb7bgT7-5POIEMhZNtew3uO6YlFaIQhnfTQr5NYSydihj42dzl2bbv52cZmVFRSsL_cIx5Win8EkdDI-xJETKQY7bDH2EP18hPxpH9cPgz91YG1kUvSvI5wbMKR1Vo069AwjV8ZNiyx8eL5_PUrod5nEfrj8RaJMzYjbMDXsJ5" alt="Elena R.">
-                        <div><h4 class="font-['Playfair_Display'] text-xl text-espresso">Elena Rodriguez</h4><p class="font-['Jost'] text-sm font-light text-taupe">E-comm Director</p></div>
+                        <img class="w-14 h-14 object-cover rounded-full ring-1 ring-champagne/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzAdgSj8DzG0-jZxz4F3AUoiJz8nkuWlcG9yO8ztm537UKcXTZa4ge8xkN_LDKw72ZQBgEh2eawRpnjAYenXRGxRalqbMwyJCTwFPb7bgT7-5POIEMhZNtew3uO6YlFaIQhnfTQr5NYSydihj42dzl2bbv52cZmVFRSsL_cIx5Win8EkdDI-xJETKQY7bDH2EP18hPxpH9cPgz91YG1kUvSvI5wbMKR1Vo069AwjV8ZNiyx8eL5_PUrod5nEfrj8RaJMzYjbMDXsJ5" alt="Elena R.">
+                        <div><h4 class="font-['Playfair_Display'] text-xl text-espresso">Elena Rodriguez</h4><p class="font-['Jost'] text-sm font-light text-stone-500">E-comm Director</p></div>
                     </div>
-                    <p class="font-['Jost'] font-light text-taupe mb-6 leading-relaxed italic relative z-10">"Highly professional, responsive, and they truly care about my business growth. It's like having a COO."</p>
-                    <span class="inline-block px-4 py-1.5 bg-alabaster/80 text-champagne text-xs font-['Jost'] uppercase tracking-wider rounded-full relative z-10">5-Star Excellence</span>
+                    <p class="font-['Jost'] font-light text-stone-500 mb-6 leading-relaxed italic relative z-10">"Highly professional, responsive, and they truly care about my business growth. It's like having a COO."</p>
+                    <span class="inline-block px-4 py-1.5 bg-champagne/10 text-champagne text-xs font-['Jost'] uppercase tracking-wider rounded-full relative z-10">5-Star Excellence</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How We Work / CTA Section -->
-    <section class="py-40 md:py-56 bg-alabaster border-b border-[#E6DFDC]">
+    <!-- CTA Section -->
+    <section class="py-40 md:py-56 border-b border-[#E6DFDC]">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="fade-in">
-                <p class="font-['Jost'] text-xs uppercase tracking-[0.35em] text-champagne font-light mb-6">06 &mdash; Connect</p>
-                <h2 class="font-['Playfair_Display'] text-5xl md:text-6xl font-normal tracking-tight text-espresso mb-8">Ready to Buy Back Your Time?</h2>
-                <p class="font-['Jost'] text-lg font-light text-taupe leading-loose mb-14 max-w-2xl mx-auto">I take on a strictly limited number of clients to ensure absolute white-glove service. Let's see if we're a fit to partner together.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-10 items-center">
-                    <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="group font-['Jost'] text-sm uppercase tracking-[0.25em] text-espresso border-b border-espresso pb-1 hover:text-champagne hover:border-champagne transition-colors duration-700 flex items-center gap-2">
-                        Book a Confidential Discovery Call
+            <div class="fade-up">
+                <p class="font-['Jost'] text-xs uppercase tracking-[0.4em] text-champagne font-light mb-6">Let's Begin</p>
+                <h2 class="font-['Playfair_Display'] text-5xl md:text-6xl font-normal tracking-tight text-espresso mb-8">Ready to Reclaim Your Time?</h2>
+                <p class="font-['Jost'] text-lg font-light text-stone-500 leading-loose mb-14 max-w-2xl mx-auto">Join the 500+ entrepreneurs who have scaled their businesses with Guestly as their secret weapon.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6 items-center">
+                    <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="bg-espresso text-alabaster rounded-full px-10 py-5 font-['Jost'] text-sm uppercase tracking-[0.2em] hover:bg-champagne transition-colors duration-700 font-medium">
+                        Book a Strategy Call
+                    </a>
+                    <a href="#services" class="text-espresso border-b border-espresso pb-1 hover:text-champagne hover:border-champagne transition-colors duration-700 font-['Jost'] text-sm uppercase tracking-[0.2em] font-medium flex items-center gap-2">
+                        Explore Services
                         <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
                     </a>
                 </div>
@@ -288,34 +259,31 @@ jost: ['Jost', 'sans-serif'],
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-40 md:py-56 bg-alabaster border-b border-[#E6DFDC]">
+    <section id="contact" class="py-40 md:py-56 border-b border-[#E6DFDC]">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-20">
-                <div class="fade-in">
-                    <p class="font-['Jost'] text-xs uppercase tracking-[0.35em] text-champagne font-light mb-6">07 &mdash; Contact</p>
-                    <h2 class="font-['Playfair_Display'] text-5xl font-normal tracking-tight text-espresso mb-8">Send a Message</h2>
-                    <p class="font-['Jost'] text-lg font-light text-taupe leading-loose mb-12">I take on a strictly limited number of clients to ensure absolute white-glove service. Let's see if we're a fit to partner together.</p>
+                <div class="fade-up">
+                    <p class="font-['Jost'] text-xs uppercase tracking-[0.4em] text-champagne font-light mb-6">Get in Touch</p>
+                    <h2 class="font-['Playfair_Display'] text-5xl font-normal tracking-tight text-espresso mb-8">Let's Work Together</h2>
+                    <p class="font-['Jost'] text-lg font-light text-stone-500 leading-loose mb-12">Ready to reclaim your time? Send me a message or book a discovery call to discuss how I can support your business.</p>
                     <div class="space-y-5">
-                        <a href="https://wa.me/447511664281" target="_blank" class="flex items-center gap-5 p-5 bg-mauve/30 rounded-[2rem] transition-all duration-500 group" style="box-shadow: none;">
-                            <div class="w-12 h-12 bg-alabaster/80 rounded-[1rem] flex items-center justify-center text-espresso transition-colors duration-500 group-hover:text-champagne"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg></div>
+                        <a href="https://wa.me/447511664281" target="_blank" class="flex items-center gap-5 p-5 bg-white rounded-[2rem] shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] hover:shadow-[0_40px_80px_-20px_rgba(193,154,107,0.15)] transition-all duration-700 ease-out group">
+                            <div class="w-12 h-12 bg-champagne/10 rounded-full flex items-center justify-center text-champagne transition-colors duration-500 group-hover:bg-champagne/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg></div>
                             <div><div class="font-['Jost'] text-xs uppercase tracking-wider text-champagne font-light">WhatsApp</div><div class="font-['Playfair_Display'] text-xl text-espresso">+44 7511 664281</div></div>
                         </a>
-                        <a href="mailto:hello@nancymonaco.com" class="flex items-center gap-5 p-5 bg-mauve/30 rounded-[2rem] transition-all duration-500 group" style="box-shadow: none;">
-                            <div class="w-12 h-12 bg-alabaster/80 rounded-[1rem] flex items-center justify-center text-espresso transition-colors duration-500 group-hover:text-champagne"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg></div>
+                        <a href="mailto:hello@nancymonaco.com" class="flex items-center gap-5 p-5 bg-white rounded-[2rem] shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] hover:shadow-[0_40px_80px_-20px_rgba(193,154,107,0.15)] transition-all duration-700 ease-out group">
+                            <div class="w-12 h-12 bg-champagne/10 rounded-full flex items-center justify-center text-champagne transition-colors duration-500 group-hover:bg-champagne/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg></div>
                             <div><div class="font-['Jost'] text-xs uppercase tracking-wider text-champagne font-light">Email</div><div class="font-['Playfair_Display'] text-xl text-espresso">hello@nancymonaco.com</div></div>
                         </a>
                     </div>
                 </div>
-                <div class="bg-mauve/30 p-12 rounded-[2rem] fade-in delay-100" style="box-shadow: none;">
-                    <h3 class="font-['Playfair_Display'] text-2xl text-espresso mb-10">Quick Message</h3>
+                <div class="bg-white p-12 rounded-[2rem] shadow-[0_30px_60px_-30px_rgba(43,36,32,0.1)] fade-up delay-100">
+                    <h3 class="font-['Playfair_Display'] text-2xl text-espresso mb-10">Send a Message</h3>
                     <form onsubmit="event.preventDefault(); window.open('https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!', '_blank');" class="space-y-6">
-                        <div><label class="block font-['Jost'] text-xs uppercase tracking-wider text-champagne font-light mb-2.5">Name</label><input type="text" class="w-full px-5 py-3.5 rounded-[1rem] bg-alabaster border border-[#E6DFDC] focus:outline-none focus:ring-2 focus:ring-champagne/20 focus:border-champagne transition-all font-['Jost'] font-light text-espresso" placeholder="Your name"></div>
-                        <div><label class="block font-['Jost'] text-xs uppercase tracking-wider text-champagne font-light mb-2.5">Email</label><input type="email" class="w-full px-5 py-3.5 rounded-[1rem] bg-alabaster border border-[#E6DFDC] focus:outline-none focus:ring-2 focus:ring-champagne/20 focus:border-champagne transition-all font-['Jost'] font-light text-espresso" placeholder="your@email.com"></div>
-                        <div><label class="block font-['Jost'] text-xs uppercase tracking-wider text-champagne font-light mb-2.5">Message</label><textarea rows="4" class="w-full px-5 py-3.5 rounded-[1rem] bg-alabaster border border-[#E6DFDC] focus:outline-none focus:ring-2 focus:ring-champagne/20 focus:border-champagne transition-all font-['Jost'] font-light text-espresso" placeholder="How can I help you?"></textarea></div>
-                        <button type="submit" class="group font-['Jost'] text-sm uppercase tracking-[0.25em] text-espresso border-b border-espresso pb-1 hover:text-champagne hover:border-champagne transition-colors duration-700 flex items-center gap-2">
-                            Book a Confidential Discovery Call
-                            <span class="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
-                        </button>
+                        <div><label class="block font-['Jost'] text-xs uppercase tracking-wider text-champagne font-light mb-2.5">Name</label><input type="text" class="w-full px-5 py-3.5 rounded-full bg-alabaster border border-[#E6DFDC] focus:outline-none focus:ring-2 focus:ring-champagne/20 focus:border-champagne transition-all font-['Jost'] font-light text-espresso" placeholder="Your name"></div>
+                        <div><label class="block font-['Jost'] text-xs uppercase tracking-wider text-champagne font-light mb-2.5">Email</label><input type="email" class="w-full px-5 py-3.5 rounded-full bg-alabaster border border-[#E6DFDC] focus:outline-none focus:ring-2 focus:ring-champagne/20 focus:border-champagne transition-all font-['Jost'] font-light text-espresso" placeholder="your@email.com"></div>
+                        <div><label class="block font-['Jost'] text-xs uppercase tracking-wider text-champagne font-light mb-2.5">Message</label><textarea rows="4" class="w-full px-5 py-3.5 rounded-[1.5rem] bg-alabaster border border-[#E6DFDC] focus:outline-none focus:ring-2 focus:ring-champagne/20 focus:border-champagne transition-all font-['Jost'] font-light text-espresso" placeholder="How can I help you?"></textarea></div>
+                        <button type="submit" class="bg-espresso text-alabaster rounded-full px-10 py-5 font-['Jost'] text-sm uppercase tracking-[0.2em] hover:bg-champagne transition-colors duration-700 font-medium w-full">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -323,14 +291,14 @@ jost: ['Jost', 'sans-serif'],
     </section>
 
     <!-- Footer -->
-    <footer class="bg-alabaster py-16">
+    <footer class="py-16">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex flex-col items-center md:items-start gap-1">
                     <span class="font-['Playfair_Display'] text-2xl text-espresso">Guestly</span>
-                    <p class="font-['Jost'] text-sm font-light text-taupe">Executive & Confidential EA Services</p>
+                    <p class="font-['Jost'] text-sm font-light text-stone-500">Your Remote Business Partner</p>
                 </div>
-                <div class="flex gap-10 text-sm font-['Jost'] font-light tracking-[0.05em] text-taupe">
+                <div class="flex gap-10 text-sm font-['Jost'] font-light tracking-[0.05em] text-stone-500">
                     <a href="#about" class="hover:text-espresso transition-colors">About</a>
                     <a href="#services" class="hover:text-espresso transition-colors">Services</a>
                     <a href="#testimonials" class="hover:text-espresso transition-colors">Testimonials</a>
@@ -338,7 +306,7 @@ jost: ['Jost', 'sans-serif'],
                 </div>
             </div>
             <div class="mt-12 pt-8 border-t border-[#E6DFDC] text-center">
-                <p class="font-['Jost'] text-sm font-light text-taupe">&copy; 2025 Guestly Services Ltd. All rights reserved.</p>
+                <p class="font-['Jost'] text-sm font-light text-stone-500">&copy; 2025 Guestly Services Ltd. All rights reserved.</p>
             </div>
         </div>
     </footer>
