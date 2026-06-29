@@ -33,36 +33,6 @@ animation: fadeUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 @keyframes fadeUp {
 to { opacity: 1; transform: translateY(0); }
 }
-
-/* STRICT MOBILE OVERRIDE */
-@media (max-width: 767px) {
-  html, body {
-    width: 100% !important;
-    overflow-x: hidden !important;
-  }
-  .hero-container, .wrapper, section {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  h1, h2, p, span {
-    width: 100% !important;
-    max-width: 100% !important;
-    white-space: normal !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-  }
-  .profile-image-container, img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    object-fit: cover !important;
-  }
-}
 </style>
 <script>
 tailwind.config = {
@@ -145,7 +115,7 @@ sans: ['Jost', 'sans-serif'],
 
     <!-- About -->
     <section id="about" class="py-24 md:py-44 bg-almond">
-        <div class="max-w-[1400px] mx-auto px-6 md:px-16">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-16 w-full">
             <div class="text-center max-w-3xl mx-auto fade-up">
                 <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-8 block">About</span>
                 <h2 class="font-['Fraunces'] text-4xl sm:text-5xl md:text-7xl leading-[0.95] font-light tracking-[-0.02em] text-mocha mb-10">Nancy <em class="italic font-normal">Monaco</em></h2>
@@ -164,7 +134,7 @@ sans: ['Jost', 'sans-serif'],
 
     <!-- Services -->
     <section id="services" class="py-24 md:py-44 bg-oatmeal">
-        <div class="max-w-[1400px] mx-auto px-6 md:px-16">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-16 w-full">
             <div class="text-center mb-20 fade-up">
                 <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-8 block">Services</span>
                 <h2 class="font-['Fraunces'] text-4xl sm:text-5xl md:text-7xl leading-[0.95] font-light tracking-[-0.02em] text-mocha">What I <em class="italic font-normal">Do</em></h2>
@@ -206,7 +176,7 @@ sans: ['Jost', 'sans-serif'],
 
     <!-- Metrics -->
     <div class="py-24 md:py-32 bg-almond">
-        <div class="max-w-[1400px] mx-auto px-6 md:px-16">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-16 w-full">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
                 <div class="fade-up"><div class="font-['Fraunces'] text-5xl sm:text-6xl md:text-8xl font-light text-mocha">500+</div><div class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mt-4">Businesses Served</div></div>
                 <div class="fade-up delay-100"><div class="font-['Fraunces'] text-5xl sm:text-6xl md:text-8xl font-light text-mocha">15+</div><div class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mt-4">Hours Saved Weekly</div></div>
@@ -218,7 +188,7 @@ sans: ['Jost', 'sans-serif'],
 
     <!-- Testimonials -->
     <section id="testimonials" class="py-24 md:py-44 bg-oatmeal">
-        <div class="max-w-[1400px] mx-auto px-6 md:px-16">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-16 w-full">
             <div class="text-center mb-20 fade-up">
                 <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-8 block">Testimonials</span>
                 <h2 class="font-['Fraunces'] text-4xl sm:text-5xl md:text-7xl leading-[0.95] font-light tracking-[-0.02em] text-mocha">The Wall of <em class="italic font-normal">Love</em></h2>
@@ -242,7 +212,7 @@ sans: ['Jost', 'sans-serif'],
 
     <!-- CTA -->
     <section class="py-24 md:py-44 bg-almond">
-        <div class="max-w-4xl mx-auto px-6 md:px-16 text-center fade-up">
+        <div class="max-w-4xl mx-auto px-6 md:px-16 w-full text-center fade-up">
             <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-8 block">Let's Begin</span>
             <h2 class="font-['Fraunces'] text-4xl sm:text-5xl md:text-7xl leading-[0.95] font-light tracking-[-0.02em] text-mocha mb-8">Ready to <em class="italic font-normal">Reclaim</em> Your Time?</h2>
             <p class="text-lg text-taupe leading-[1.9] font-light mb-14 max-w-2xl mx-auto">Join the 500+ entrepreneurs who have scaled their businesses with Guestly as their secret weapon.</p>
@@ -259,7 +229,7 @@ sans: ['Jost', 'sans-serif'],
 
     <!-- Contact -->
     <section id="contact" class="py-24 md:py-44 bg-mocha text-oatmeal">
-        <div class="max-w-[1400px] mx-auto px-6 md:px-16">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-16 w-full">
             <div class="grid lg:grid-cols-2 gap-16">
                 <div class="fade-up">
                     <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-8 block">Contact</span>
@@ -290,7 +260,7 @@ sans: ['Jost', 'sans-serif'],
 
     <!-- Footer -->
     <footer class="py-12 md:py-16 bg-oatmeal border-t border-mocha/5">
-        <div class="max-w-[1400px] mx-auto px-6 md:px-16">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-16 w-full">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex flex-col items-center md:items-start gap-1">
                     <span class="font-['Fraunces'] text-xl text-mocha font-light">Guestly</span>
