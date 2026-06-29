@@ -63,9 +63,16 @@ sans: ['Jost', 'sans-serif'],
                     Book a Call
                 </a>
             </div>
-            <button class="md:hidden text-mocha">
+            <button id="mobile-menu-btn" class="md:hidden text-mocha">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
             </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-oatmeal border-b border-mocha/5 px-8 pb-8 pt-4 space-y-6">
+            <a href="#about" class="block font-['Jost'] text-xs uppercase tracking-[0.3em] text-taupe hover:text-mocha">About</a>
+            <a href="#services" class="block font-['Jost'] text-xs uppercase tracking-[0.3em] text-taupe hover:text-mocha">Services</a>
+            <a href="#testimonials" class="block font-['Jost'] text-xs uppercase tracking-[0.3em] text-taupe hover:text-mocha">Testimonials</a>
+            <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I'd%20like%20to%20hire%20you!" target="_blank" class="inline-flex items-center gap-2 bg-mocha text-oatmeal rounded-full px-6 py-2.5 font-['Jost'] text-xs uppercase tracking-[0.25em] hover:bg-brass transition-colors duration-700 shadow-sm">Book a Call</a>
+        </div>
         </div>
     </nav>
 
@@ -94,7 +101,7 @@ sans: ['Jost', 'sans-serif'],
                 <div class="col-span-12 lg:col-span-5 lg:col-start-8 fade-up delay-100 order-1 lg:order-2 relative">
                     <div class="relative">
                         <div class="absolute -inset-4 bg-blush/40 blur-3xl rounded-full"></div>
-                        <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="relative w-full h-[60vh] md:h-[75vh] object-cover object-top rounded-t-[8rem] rounded-b-[2rem] border-[8px] border-oatmeal shadow-[0_40px_80px_-20px_rgba(59,46,42,0.12)]">
+                        <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="relative w-full h-[40vh] md:h-[75vh] object-cover object-top rounded-t-[8rem] rounded-b-[2rem] border-[8px] border-oatmeal shadow-[0_40px_80px_-20px_rgba(59,46,42,0.12)]">
                     </div>
                 </div>
             </div>
@@ -102,7 +109,7 @@ sans: ['Jost', 'sans-serif'],
     </section>
 
     <!-- About -->
-    <section id="about" class="py-32 md:py-44 bg-almond">
+    <section id="about" class="py-20 md:py-44 bg-almond">
         <div class="max-w-[1400px] mx-auto px-8 md:px-16">
             <div class="text-center max-w-3xl mx-auto fade-up">
                 <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-8 block">About</span>
@@ -121,39 +128,39 @@ sans: ['Jost', 'sans-serif'],
     </section>
 
     <!-- Services -->
-    <section id="services" class="py-32 md:py-44 bg-oatmeal">
+    <section id="services" class="py-20 md:py-44 bg-oatmeal">
         <div class="max-w-[1400px] mx-auto px-8 md:px-16">
             <div class="text-center mb-20 fade-up">
                 <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-8 block">Services</span>
                 <h2 class="font-['Fraunces'] text-5xl md:text-7xl leading-[0.95] font-light tracking-[-0.02em] text-mocha">What I <em class="italic font-normal">Do</em></h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-12 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up">
+                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-8 md:p-12 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up">
                     <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-6 block">01</span>
                     <h3 class="font-['Fraunces'] text-3xl text-mocha mb-4 font-light">Strategic Planning</h3>
                     <p class="text-taupe font-light leading-[1.8]">Calendar management and executive assistance tailored to your business objectives.</p>
                 </div>
-                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-12 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up delay-100">
+                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-8 md:p-12 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up delay-100">
                     <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-6 block">02</span>
                     <h3 class="font-['Fraunces'] text-3xl text-mocha mb-4 font-light">Ops &amp; Systems</h3>
                     <p class="text-taupe font-light leading-[1.8]">Streamline your backend processes with custom automations and CRM management.</p>
                 </div>
-                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-12 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up delay-200">
+                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-8 md:p-12 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up delay-200">
                     <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-6 block">03</span>
                     <h3 class="font-['Fraunces'] text-3xl text-mocha mb-4 font-light">Customer Success</h3>
                     <p class="text-taupe font-light leading-[1.8]">White-glove communication that keeps your clients happy and your retention high.</p>
                 </div>
-                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-12 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up">
+                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-8 md:p-12 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up">
                     <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-6 block">04</span>
                     <h3 class="font-['Fraunces'] text-3xl text-mocha mb-4 font-light">Inbox Management</h3>
                     <p class="text-taupe font-light leading-[1.8]">Full inbox triage, response drafting, and priority flagging so you never miss a critical message.</p>
                 </div>
-                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-12 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up delay-100">
+                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-8 md:p-12 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up delay-100">
                     <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-6 block">05</span>
                     <h3 class="font-['Fraunces'] text-3xl text-mocha mb-4 font-light">Research &amp; Reporting</h3>
                     <p class="text-taupe font-light leading-[1.8]">Competitive analysis, data-backed recommendations, and portfolio efficiency audits.</p>
                 </div>
-                <div class="bg-mocha rounded-[2.5rem] p-12 flex flex-col items-center justify-center text-center shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] fade-up delay-200">
+                <div class="bg-mocha rounded-[2.5rem] p-8 md:p-12 flex flex-col items-center justify-center text-center shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] fade-up delay-200">
                     <h3 class="font-['Fraunces'] text-3xl text-oatmeal mb-4 font-light">Need Something Else?</h3>
                     <p class="text-oatmeal/60 font-light mb-8">I adapt quickly to new tools and processes.</p>
                     <a href="https://wa.me/447511664281?text=Hi%20Nancy,%20I%20have%20a%20custom%20request." target="_blank" class="inline-flex items-center gap-3 bg-brass text-mocha rounded-full px-8 py-3.5 font-['Jost'] text-xs uppercase tracking-[0.25em] hover:bg-oatmeal transition-colors duration-700 shadow-sm">Ask Me About It</a>
@@ -163,7 +170,7 @@ sans: ['Jost', 'sans-serif'],
     </section>
 
     <!-- Metrics -->
-    <div class="py-24 md:py-32 bg-almond">
+    <div class="py-16 md:py-32 bg-almond">
         <div class="max-w-[1400px] mx-auto px-8 md:px-16">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
                 <div class="fade-up"><div class="font-['Fraunces'] text-6xl md:text-8xl font-light text-mocha">500+</div><div class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mt-4">Businesses Served</div></div>
@@ -175,22 +182,22 @@ sans: ['Jost', 'sans-serif'],
     </div>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="py-32 md:py-44 bg-oatmeal">
+    <section id="testimonials" class="py-20 md:py-44 bg-oatmeal">
         <div class="max-w-[1400px] mx-auto px-8 md:px-16">
             <div class="text-center mb-20 fade-up">
                 <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-8 block">Testimonials</span>
                 <h2 class="font-['Fraunces'] text-5xl md:text-7xl leading-[0.95] font-light tracking-[-0.02em] text-mocha">The Wall of <em class="italic font-normal">Love</em></h2>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-10 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up">
+                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-6 md:p-10 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up">
                     <p class="text-taupe leading-[1.8] mb-8 italic font-light">"Guestly didn't just take over my emails. They completely redesigned my client onboarding process. I've never felt more organized."</p>
                     <p class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass">Sarah Jenkins, Founder of Bloom Agency</p>
                 </div>
-                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-10 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up delay-100">
+                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-6 md:p-10 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up delay-100">
                     <p class="text-taupe leading-[1.8] mb-8 italic font-light">"The ROI was immediate. The level of initiative Nancy's team shows is unlike any other VA service I've tried."</p>
                     <p class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass">David Lowery, Tech Lead at ScaleUp</p>
                 </div>
-                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-10 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up delay-200">
+                <div class="bg-white/60 backdrop-blur-sm border border-white rounded-[2.5rem] p-6 md:p-10 shadow-[0_25px_60px_-30px_rgba(59,46,42,0.1)] hover:shadow-[0_35px_70px_-25px_rgba(197,165,114,0.2)] transition-all duration-1000 ease-out fade-up delay-200">
                     <p class="text-taupe leading-[1.8] mb-8 italic font-light">"Highly professional, responsive, and they truly care about my business growth. It's like having a COO."</p>
                     <p class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass">Elena Rodriguez, E-comm Director</p>
                 </div>
@@ -199,7 +206,7 @@ sans: ['Jost', 'sans-serif'],
     </section>
 
     <!-- CTA -->
-    <section class="py-32 md:py-44 bg-almond">
+    <section class="py-20 md:py-44 bg-almond">
         <div class="max-w-4xl mx-auto px-8 md:px-16 text-center fade-up">
             <span class="font-['Jost'] text-xs uppercase tracking-[0.3em] text-brass mb-8 block">Let's Begin</span>
             <h2 class="font-['Fraunces'] text-5xl md:text-7xl leading-[0.95] font-light tracking-[-0.02em] text-mocha mb-8">Ready to <em class="italic font-normal">Reclaim</em> Your Time?</h2>
@@ -216,7 +223,7 @@ sans: ['Jost', 'sans-serif'],
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-32 md:py-44 bg-mocha text-oatmeal">
+    <section id="contact" class="py-20 md:py-44 bg-mocha text-oatmeal">
         <div class="max-w-[1400px] mx-auto px-8 md:px-16">
             <div class="grid lg:grid-cols-2 gap-16">
                 <div class="fade-up">
@@ -247,7 +254,7 @@ sans: ['Jost', 'sans-serif'],
     </section>
 
     <!-- Footer -->
-    <footer class="py-16 bg-oatmeal border-t border-mocha/5">
+    <footer class="py-12 md:py-16 bg-oatmeal border-t border-mocha/5">
         <div class="max-w-[1400px] mx-auto px-8 md:px-16">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex flex-col items-center md:items-start gap-1">
@@ -267,5 +274,11 @@ sans: ['Jost', 'sans-serif'],
         </div>
     </footer>
 
+    <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+    </script>
 </body>
 </html>
