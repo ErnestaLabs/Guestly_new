@@ -8,6 +8,13 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,144,300;0,144,400;0,144,500;1,144,300;1,144,400;1,144,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap');
+html, body {
+width: 100%;
+overflow-x: hidden;
+}
+*, *::before, *::after {
+box-sizing: border-box;
+}
 body {
 background-color: #FAF6F1;
 color: #3B2E2A;
@@ -50,7 +57,7 @@ sans: ['Jost', 'sans-serif'],
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,144,300;0,144,400;0,144,500;1,144,300;1,144,400;1,144,500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap">
 </head>
-<body class="bg-oatmeal text-mocha font-['Jost'] font-light antialiased selection:bg-brass/20 selection:text-mocha overflow-x-hidden">
+<body class="bg-oatmeal text-mocha font-['Jost'] font-light antialiased selection:bg-brass/20 selection:text-mocha">
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-oatmeal/80 backdrop-blur-md border-b border-mocha/5 transition-all">
@@ -99,7 +106,7 @@ sans: ['Jost', 'sans-serif'],
                 <div class="col-span-12 lg:col-span-5 lg:col-start-8 fade-up delay-100 order-2 lg:order-2 relative mt-12 md:mt-0">
                     <div class="relative">
                         <div class="absolute max-md:-inset-y-4 max-md:-left-4 max-md:right-0 -inset-4 bg-blush/40 blur-3xl rounded-full"></div>
-                        <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="relative w-full h-auto box-border md:h-[80vh] md:object-cover md:object-top rounded-[2rem] md:rounded-t-[8rem] md:rounded-b-[2rem] border-[8px] border-oatmeal shadow-[0_40px_80px_-20px_rgba(59,46,42,0.12)]">
+                        <img src="images/nancy-photo.jpg" alt="Nancy Monaco" class="relative w-full max-w-full h-auto box-border md:h-[80vh] md:object-cover md:object-top rounded-[2rem] md:rounded-t-[8rem] md:rounded-b-[2rem] border-[8px] border-oatmeal shadow-[0_40px_80px_-20px_rgba(59,46,42,0.12)]">
                     </div>
                 </div>
             </div>
